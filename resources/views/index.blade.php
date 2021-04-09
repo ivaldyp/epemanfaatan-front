@@ -71,6 +71,11 @@
 			/*margin-top: 100px;*/
 			left: 50%;
 		}
+		.carousel-inner div img {
+			height: 100%;
+			width: 100%;
+			border-radius: 8px;
+		}
 	</style>
 
 @endsection
@@ -85,12 +90,29 @@
 				<div class="row">
 					<div class="col-md-8">
 						<div class="white-box" style="padding: 0px;">
-							<img src="{{ ('/epemanfaatan/public/img/index/carousel-welcome.jpeg') }}" alt="welcome"
+							<div id="carousel-example-captions" data-ride="carousel" class="carousel slide">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-example-captions" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-example-captions" data-slide-to="1"></li>
+                                    <li data-target="#carousel-example-captions" data-slide-to="2"></li>
+                                </ol>
+                                <div role="listbox" class="carousel-inner">
+                                    <div class="item active"> <img src="{{ ('/epemanfaatan/public/img/index/carousel-img1.jpeg') }}" alt="First slide image">
+                                        
+                                    </div>
+                                    <div class="item"> <img src="{{ ('/epemanfaatan/public/img/index/carousel-img2.jpeg') }}" alt="Second slide image">
+                                        
+                                    </div>
+                                </div>
+                                <a href="#carousel-example-captions" role="button" data-slide="prev" class="left carousel-control"> <span aria-hidden="true" class="fa fa-angle-left"></span> <span class="sr-only">Previous</span> </a>
+                                <a href="#carousel-example-captions" role="button" data-slide="next" class="right carousel-control"> <span aria-hidden="true" class="fa fa-angle-right"></span> <span class="sr-only">Next</span> </a>
+                            </div>
+							{{-- <img src="{{ ('/epemanfaatan/public/img/index/carousel-img1.jpeg') }}" alt="welcome"
 							style="
 								height: 100%;
 								width: 100%;
 								border-radius: 8px;
-							">
+							"> --}}
 						</div>
 					</div>
 					<div class="col-md-4">
