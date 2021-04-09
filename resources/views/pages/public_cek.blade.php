@@ -50,12 +50,12 @@
 
 	<div class="container login-box" style="margin-top: 90px; padding-left: 50px; padding-right: 50px; background-color: #fefbe9">
 		<div class="row">
-			<div class=" text-center" style="padding-top: 130px;padding-bottom: 150px;">
+			<div class=" text-center form-box" style="padding-top: 130px;padding-bottom: 150px;">
 				<h1 style="font-weight: bold; color: #183a1d; padding-bottom: 20px">CEK STATUS</h1>
 				 <form class="form-horizontal form-material" id="loginform" action="index.html">
 					<div class="form-group ">
 					  <div class="col-xs-12">
-						<input class="form-control" type="text" required="" placeholder="Masukkan Kode Unik" style="" id="input-kode">
+						<input class="form-control" type="text" required="" placeholder="Masukkan Kode Unik" style="" id="input-kode" autocomplete="off">
 					  </div>
 					</div>
 					<div class="form-group text-center">
@@ -89,5 +89,9 @@
 	<script src="{{ ('/epemanfaatan/public/ample/js/custom.min.js') }}"></script>
 	<!-- Style Switcher -->
 	<script src="{{ ('/epemanfaatan/public/ample/plugins/bower_components/styleswitcher/jQuery.style.switcher.js') }}"></script>
+
+	<script type="text/javascript">
+		
+	</script>
 
 @endsection

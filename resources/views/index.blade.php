@@ -155,31 +155,35 @@
 		<div class="row row-full" style="background-color: #183a1d;">
 			<div class="col-md-12">
 				<div class="row">
+					
 					<div class="col-md-4 col-md-offset-2">
 						<div class="white-box" style="margin-top: 30px; height: 80px; background-color: #f0a04b; padding: 0px;">
-							<img src="{{ ('/epemanfaatan/public/img/index/btn-ceksts.jpeg') }}" alt="cek_status"
-							style="
-								height: 100%;
-								max-width: 100%;
-								margin-left: auto;
-								margin-right: auto;
-								border-radius: 8px;
-								display: block;
-							">
+							<a href="cekkode">
+								<img src="{{ ('/epemanfaatan/public/img/index/btn-ceksts.jpeg') }}" alt="cek_status"
+								style="
+									height: 100%;
+									max-width: 100%;
+									margin-left: auto;
+									margin-right: auto;
+									border-radius: 8px;
+									display: block;
+								">
+							</a>
 						</div>
-
 					</div>
 					<div class="col-md-4">
 						<div class="white-box" style="margin-top: 30px; height: 80px; background-color: #f0a04b; padding: 0px;">
-							<img src="{{ ('/epemanfaatan/public/img/index/btn-peta.jpeg') }}" alt="cek_status"
-							style="
-								height: 100%;
-								max-width: 100%;
-								margin-left: auto;
-								margin-right: auto;
-								border-radius: 8px;
-								display: block;
-							">
+							<a href="peta">
+								<img src="{{ ('/epemanfaatan/public/img/index/btn-peta.jpeg') }}" alt="cek_status"
+								style="
+									height: 100%;
+									max-width: 100%;
+									margin-left: auto;
+									margin-right: auto;
+									border-radius: 8px;
+									display: block;
+								">
+							</a>
 						</div>
 					</div>
 				</div>
