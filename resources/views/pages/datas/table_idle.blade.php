@@ -3,20 +3,17 @@
 @section('css')
 
 	<!-- Bootstrap Core CSS -->
-	<link href="{{ ('/epemanfaatan/public/ample/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
-	<link href="{{ ('/epemanfaatan/public/ample/plugins/bower_components/datatables/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css" />
+	<link href="/{{config('app.name')}}{{ ('/public/ample/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+	<link href="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/datatables/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css" />
 	<link href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css" />
 	<!-- Menu CSS -->
-	<link href="{{ ('/epemanfaatan/public/ample/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css') }}" rel="stylesheet">
-	<!-- Carousel CSS -->
-	<link href="{{ ('/epemanfaatan/public/ample/plugins/bower_components/owl.carousel/owl.carousel.min.css') }}" rel="stylesheet" type="text/css"/>
-	<link href="{{ ('/epemanfaatan/public/ample/plugins/bower_components/owl.carousel/owl.theme.default.css') }}" rel="stylesheet" type="text/css"/>
+	<link href="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css') }}" rel="stylesheet">
 	<!-- animation CSS -->
-	<link href="{{ ('/epemanfaatan/public/ample/css/animate.css') }}" rel="stylesheet">
+	<link href="/{{config('app.name')}}{{ ('/public/ample/css/animate.css') }}" rel="stylesheet">
 	<!-- Custom CSS -->
-	<link href="{{ ('/epemanfaatan/public/ample/css/style.css') }}" rel="stylesheet">
+	<link href="/{{config('app.name')}}{{ ('/public/ample/css/style.css') }}" rel="stylesheet">
 	<!-- color CSS -->
-	<link href="{{ ('/epemanfaatan/public/ample/css/colors/megna-dark.css') }}" id="theme" rel="stylesheet">
+	<link href="/{{config('app.name')}}{{ ('/public/ample/css/colors/megna-dark.css') }}" id="theme" rel="stylesheet">
 
 	<style type="text/css">
 		.img-items:hover {
@@ -38,41 +35,6 @@
 			box-shadow: 0 0 5px 0 rgb(0 0 0 / 20%);
 			border-radius: 8px;
 		}
-		.lainnya1 {
-			background-color: #f0a04b;
-			text-align: center;
-			padding-top: 10px;
-			padding-bottom: 10px;
-			padding-left: 0px;
-			padding-right: 0px;
-		}
-		.lainnya2 {
-			background-color: #183a1d;
-			text-align: center;
-			padding-top: 10px;
-			padding-bottom: 10px;
-			padding-left: 0px;
-			padding-right: 0px;
-		}
-		.lainnya1 p,
-		.lainnya1 h1 {
-			margin-bottom: 0px;
-			margin-top: 0px;
-		}
-		.lainnya2 p,
-		.lainnya2 h1 {
-			margin-bottom: 0px;
-			margin-top: 0px;
-			color: #e1eedd;
-		}
-		.row-full{
-		 width: 100vw;
-		 position: relative;
-		 margin-left: -50vw;
-		 /*height: 100px;*/
-		 /*margin-top: 100px;*/
-		 left: 50%;
-		}
 	</style>
 
 @endsection
@@ -82,88 +44,23 @@
 @section('content')
 
 	<div class="container" style="margin-top: 90px">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="row">
-					<div class="col-md-8">
-						<div class="white-box"></div>
-					</div>
-					<div class="col-md-4">
-						<div class="row" style="">
-							<div class="col-md-6" style="height: 100px;">
-								<div class="white-box lainnya1">
-									<p class="" style="font-weight: bold;">SEWA</p>
-									<h1 style="">10</h1> 
-								</div>
-							</div>
-							<div class="col-md-6" style="height: 100px;">
-								<div class="white-box lainnya1">
-									<p class="" style="font-weight: bold;">PINJAM PAKAI</p>
-									<h1 style="">20</h1>
-								</div>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-md-6" style="height: 100px;">
-								<div class="white-box lainnya1">
-									<p class="" style="font-weight: bold;">BTO</p>
-									<h1 style="">40</h1>
-								</div>
-							</div>
-							<div class="col-md-6" style="height: 100px;">
-								<div class="white-box lainnya1">
-									<p class="" style="font-weight: bold;">BOT</p>
-									<h1 style="">15</h1>
-								</div>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-md-6" style="height: 100px;">
-								<div class="white-box lainnya1">
-									<p class="" style="font-weight: bold;">ASET IDLE</p>
-									<h1 style="">15</h1>
-								</div>
-							</div>
-							<div class="col-md-6" style="height: 100px;">
-								<div class="white-box lainnya1">
-									<p class="" style="font-weight: bold;">DALAM PROSES</p>
-									<h1 style="">5</h1>
-								</div>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-md-12">
-								<div class="white-box lainnya2">
-									<p class="" style="font-weight: bold;">TOTAL PKS</p>
-									<h1 style="">85</h1>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row row-full" style="background-color: #183a1d; margin-bottom: 30px;">
-			<div class="col-md-12">
-				<div class="row">
-					<div class="col-md-5 col-md-offset-1">
-						<div class="white-box" style="margin-top: 30px; height: 70px; background-color: #f0a04b"></div>
-					</div>
-					<div class="col-md-5">
-						<div class="white-box" style="margin-top: 30px; height: 70px; background-color: #f0a04b"></div>
-					</div>
-				</div>
-			</div>
-		</div>
 
 		<div class="row">
 			<div class="col-md-12">
 				<div class="white-box">
-					<h3 class="box-title m-b-0">Data Table</h3>
+					<h3 class="box-title m-b-0">Aset Idle</h3>
+					<form method="get" action="/epemanfaatan/data/idle" class="form-horizontal" style="margin-top: 25px;">
+						<div class="form-group">
+							<label for="yearnow" class="col-md-1 control-label"> Filter </label>
+							<div class="col-md-3">
+								<select class="form-control" name="s" id="statnow" onchange="this.form.submit()">
+									<option <?php if ($s == "all"): ?> selected <?php endif ?> value="all">--SEMUA--</option>
+									<option <?php if ($s == "proses"): ?> selected <?php endif ?> value="proses">Dalam Proses</option>
+									<option <?php if ($s == "idle"): ?> selected <?php endif ?> value="idle">Belum Di Proses</option>
+								</select>
+							</div>
+						</div>
+					</form>
 					<div class="table-responsive">
 						<table id="myTable" class="table table-striped">
 							<thead>
@@ -648,33 +545,32 @@
 @section('js')
 
 	<!-- jQuery -->
-	<script src="{{ ('/epemanfaatan/public/ample/plugins/bower_components/jquery/dist/jquery.min.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/jquery/dist/jquery.min.js') }}"></script>
 	<!-- Bootstrap Core JavaScript -->
-	<script src="{{ ('/epemanfaatan/public/ample/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/public/ample/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 	<!-- Menu Plugin JavaScript -->
-	<script src="{{ ('/epemanfaatan/public/ample/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js') }}"></script>
 	<!-- slimscroll JavaScript -->
-	<script src="{{ ('/epemanfaatan/public/ample/js/jquery.slimscroll.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/public/ample/js/jquery.slimscroll.js') }}"></script>
 	<!-- Wave Effects -->
-	<script src="{{ ('/epemanfaatan/public/ample/js/waves.js') }}"></script>
-	<!-- jQuery for carousel -->
-	<script src="{{ ('/epemanfaatan/public/ample/plugins/bower_components/owl.carousel/owl.carousel.min.js') }}"></script>
-	<script src="{{ ('/epemanfaatan/public/ample/plugins/bower_components/owl.carousel/owl.custom.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/public/ample/js/waves.js') }}"></script>
 	<!-- Custom Theme JavaScript -->
 	<!-- Data table -->
-	<script src="{{ ('/epemanfaatan/public/ample/js/custom.min.js') }}"></script>
-	<script src="{{ ('/epemanfaatan/public/ample/plugins/bower_components/datatables/jquery.dataTables.min.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/public/ample/js/custom.min.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/datatables/jquery.dataTables.min.js') }}"></script>
 	<script>
 		$(document).ready(function () {
-			$('#myTable').DataTable({
-				pageLength : 5,
-				"searching": false,
-				"lengthChange": false,
+			var dt = $('#myTable').DataTable({
+				// pageLength : 5,
+				// "searching": false,
+				// "lengthChange": false,
 			});
+
+
 		});
 	</script>
 	<!-- Style Switcher -->
-	<script src="{{ ('/epemanfaatan/public/ample/plugins/bower_components/styleswitcher/jQuery.style.switcher.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/styleswitcher/jQuery.style.switcher.js') }}"></script>
 
 
 @endsection

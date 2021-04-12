@@ -8,7 +8,9 @@ class PublicController extends Controller
 {
     public function cekkode(Request $request)
     {
-    	return view('pages.public_cek');
+    	$kode = $request->kode;
+    	return view('pages.public_cek')
+    			->with('kode', $kode);
     }
 
     public function peta(Request $request)

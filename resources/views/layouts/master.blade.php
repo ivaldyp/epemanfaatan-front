@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<link rel="icon" type="image/png" sizes="16x16" href="{{ ('/epemanfaatan/public/plugins/images/favicon.png') }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="/{{config('app.name')}}{{ ('/public/plugins/images/favicon.png') }}">
 	<title>ePemanfaatan</title>
 
 	@yield('css')
@@ -33,12 +33,12 @@
 			<div class="navbar-header" style="background: #e1eedd;">
 				<div class="top-left-part" style="border-right-width: 0px;">
 					<!-- Logo -->
-					<a class="logo" href="/epemanfaatan">
+					<a class="logo" href="/{{ config('app.name') }}">
 						<!-- Logo icon image, you can use font-icon also --><b>
-						<!--This is dark logo icon--><img src="{{ ('/epemanfaatan/public/ample/plugins/images/admin-logo.png') }}" alt="home" class="dark-logo" /><!--This is light logo icon--><img src="{{ ('/epemanfaatan/public/ample/plugins/images/admin-logo-dark.png') }}" alt="home" class="light-logo" />
+						<!--This is dark logo icon--><img src="/{{config('app.name')}}{{ ('/public/ample/plugins/images/admin-logo.png') }}" alt="home" class="dark-logo" /><!--This is light logo icon--><img src="/{{config('app.name')}}{{ ('/public/ample/plugins/images/admin-logo-dark.png') }}" alt="home" class="light-logo" />
 					 </b>
 						<!-- Logo text image you can use text also --><span class="hidden-xs">
-						<!--This is dark logo text--><img src="{{ ('/epemanfaatan/public/ample/plugins/images/admin-text.png') }}" alt="home" class="dark-logo" /><!--This is light logo text--><img src="{{ ('/epemanfaatan/public/ample/plugins/images/admin-text-dark.png') }}" alt="home" class="light-logo" />
+						<!--This is dark logo text--><img src="/{{config('app.name')}}{{ ('/public/ample/plugins/images/admin-text.png') }}" alt="home" class="dark-logo" /><!--This is light logo text--><img src="/{{config('app.name')}}{{ ('/public/ample/plugins/images/admin-text-dark.png') }}" alt="home" class="light-logo" />
 					 </span> </a>
 				</div>
 				<!-- /Logo -->
@@ -78,10 +78,10 @@
 				</ul>
 				<ul class="nav navbar-top-links navbar-right pull-right" >
 					<li class="hidden-xs hidden-sm" style="padding-left: 5px; padding-right: 5px; font-weight: bold;">
-						<a href="cekkode">CEK STATUS</a>
+						<a href="/{{ config('app.name') }}/cekkode">CEK STATUS</a>
 					</li>
 					<li class="hidden-xs hidden-sm" style="padding-left: 5px; padding-right: 5px; font-weight: bold;">
-						<a href="peta">PETA</a>
+						<a href="/{{ config('app.name') }}/peta">PETA</a>
 					</li>
 					<li class="hidden-xs hidden-sm" style="padding-left: 5px; padding-right: 5px; font-weight: bold;">
 						<a href="javascript:void(0)">PERATURAN</a>

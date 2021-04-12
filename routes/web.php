@@ -22,3 +22,7 @@ Route::get('/index2', function () {
 
 Route::get('/cekkode', 'PublicController@cekkode');
 Route::get('/peta', 'PublicController@peta');
+
+Route::group(['prefix' => 'data'], function () {
+	Route::get('/idle', 'DataController@idle');
+});
