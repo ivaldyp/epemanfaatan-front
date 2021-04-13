@@ -21,6 +21,9 @@
 	crossorigin=""></script>
 
 	<style type="text/css">
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+		}
 		.navbar-top-links li a{
 			transition: 0.2s;
 		}

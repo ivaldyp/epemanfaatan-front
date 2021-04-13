@@ -17,6 +17,9 @@
 	<link href="/{{config('app.name')}}{{ ('/public/ample/css/colors/megna-dark.css') }}" id="theme" rel="stylesheet">
 
 	<style type="text/css">
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+		}
 		.img-items:hover {
 			transform: scale(1.5);
 		}
@@ -121,29 +124,14 @@
 						<div class="row" style="">
 							<div class="col-md-6" style="height: 100px;">
 								<div class="white-box lainnya1">
-									<p class="" style="font-weight: bold;">SEWA</p>
-									<h1 style="">10</h1> 
+									<p class="" style="font-weight: bold; color: #fefbe9">SEWA</p>
+									<h1 style="color: #fefbe9" >10</h1> 
 								</div>
 							</div>
 							<div class="col-md-6" style="height: 100px;">
 								<div class="white-box lainnya1">
-									<p class="" style="font-weight: bold;">PINJAM PAKAI</p>
-									<h1 style="">20</h1>
-								</div>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-md-6" style="height: 100px;">
-								<div class="white-box lainnya1">
-									<p class="" style="font-weight: bold;">BTO</p>
-									<h1 style="">40</h1>
-								</div>
-							</div>
-							<div class="col-md-6" style="height: 100px;">
-								<div class="white-box lainnya1">
-									<p class="" style="font-weight: bold;">BOT</p>
-									<h1 style="">15</h1>
+									<p class="" style="font-weight: bold; color: #fefbe9">PINJAM PAKAI</p>
+									<h1 style="color: #fefbe9" >20</h1>
 								</div>
 							</div>
 						</div>
@@ -151,15 +139,30 @@
 						<div class="row">
 							<div class="col-md-6" style="height: 100px;">
 								<div class="white-box lainnya1">
-									<p class="" style="font-weight: bold;">TOTAL PKS</p>
-									<h1 style="">85</h1>
+									<p class="" style="font-weight: bold; color: #fefbe9">BGS</p>
+									<h1 style="color: #fefbe9" >40</h1>
+								</div>
+							</div>
+							<div class="col-md-6" style="height: 100px;">
+								<div class="white-box lainnya1">
+									<p class="" style="font-weight: bold; color: #fefbe9">BSG</p>
+									<h1 style="color: #fefbe9" >15</h1>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-6" style="height: 100px;">
+								<div class="white-box lainnya1">
+									<p class="" style="font-weight: bold; color: #fefbe9">TOTAL PKS</p>
+									<h1 style="color: #fefbe9" >85</h1>
 								</div>
 							</div>
 							<div class="col-md-6" style="height: 100px;">
 								<a href="data/idle?s=proses">
 									<div class="white-box lainnya1">
-										<p class="" style="font-weight: bold;">DALAM PROSES</p>
-										<h1 style="">5</h1>
+										<p class="" style="font-weight: bold; color: #fefbe9">DALAM PROSES</p>
+										<h1 style="color: #fefbe9" >5</h1>
 									</div>
 								</a>
 							</div>
@@ -169,8 +172,8 @@
 							<div class="col-md-12">
 								<a href="data/idle?s=idle">
 									<div class="white-box lainnya2">
-										<p class="" style="font-weight: bold;">ASET IDLE</p>
-										<h1 style="">15</h1>
+										<p class="" style="font-weight: bold; color: #fefbe9">ASET SIAP DIKERJASAMAKAN</p>
+										<h1 style="color: #fefbe9" >15</h1>
 									</div>
 								</a>
 							</div>
