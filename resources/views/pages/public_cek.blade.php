@@ -75,7 +75,7 @@
 				<form class="form-horizontal form-material" id="loginform" action="/{{ config('app.name') }}/cekkode">
 					<div class="form-group ">
 						<div class="col-xs-12">
-							<input class="form-control" type="text" placeholder="Masukkan Kode Unik" required="" style="" id="input-kode" autocomplete="off" name="kode">
+							<input class="form-control" type="text" placeholder="Masukkan Kode Unik Mitra" required="" style="" id="input-kode" autocomplete="off" name="kode">
 						</div>
 					</div>
 					<div class="form-group text-center">
@@ -111,22 +111,13 @@
                                         </svg>
                                         <svg viewBox="0 0 80 60" preserveAspectRatio="none">
                                             <use xlink:href="#tabshape"></use>
-                                        </svg> <span>Pra-Persetujuan</span> </a>
-                                </li>
-                                <li>
-                                    <a href="#section-shape-3">
-                                        <svg viewBox="0 0 80 60" preserveAspectRatio="none">
-                                            <use xlink:href="#tabshape"></use>
-                                        </svg>
-                                        <svg viewBox="0 0 80 60" preserveAspectRatio="none">
-                                            <use xlink:href="#tabshape"></use>
-                                        </svg> <span>Persetujuan</span> </a>
+                                        </svg> <span>PKS Terbit</span> </a>
                                 </li>
                                 <li>
                                     <a href="#section-shape-5">
                                         <svg viewBox="0 0 80 60" preserveAspectRatio="none">
                                             <use xlink:href="#tabshape"></use>
-                                        </svg> <span>Perjanjian</span> </a>
+                                        </svg> <span>Pembayaran</span> </a>
                                 </li>
                             </ul>
                         </nav>
@@ -137,8 +128,6 @@
                             </section>
                             <section id="section-shape-2">
                                 <h2>Tabbing 2</h2></section>
-                            <section id="section-shape-3">
-                                <h2>Tabbing 3</h2></section>
                             <section id="section-shape-5">
                                 <h2>Tabbing 5</h2></section>
                         </div>
