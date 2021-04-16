@@ -43,6 +43,7 @@
 		}
 		#issmap {
 			height: 500px; 
+			max-height: 1000px;
 			/*position: absolute;
 			top: 0px;
 			left: 0px;
@@ -57,7 +58,8 @@
 
 @section('content')
 
-	<div class="container" style="margin-top: 90px; padding-left: 50px; padding-right: 50px;">
+	<div class="container" style="margin-top: 90px; padding-left: 50px; padding-right: 50px;
+	height:100%;padding-bottom:0;">
 		<div class="row">
 			<div class="white-box">
 				<div id="issmap">

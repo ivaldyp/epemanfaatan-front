@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-color: #fefbe9; ">
 
 <head>
 	<meta charset="utf-8">
@@ -25,7 +25,7 @@
 	<!-- ============================================================== -->
 	<!-- Wrapper -->
 	<!-- ============================================================== -->
-	<div id="wrapper">
+	<div id="wrapper" style="margin-bottom: 270px;">
 		<!-- ============================================================== -->
 		<!-- Topbar header - style you can find in pages.scss -->
 		<!-- ============================================================== -->
@@ -132,7 +132,7 @@
 		<div id="page-wrapper" style="
 			background-color: #fefbe9; 
 			margin-left: 0px; 
-			margin-top: 0px; 
+			margin-top: 0px;
 			padding-bottom: 0px; 
 			padding-top: 10px;">
 		

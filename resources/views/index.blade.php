@@ -90,7 +90,8 @@
 
 @section('content')
 
-	<div class="container" style="margin-top: 90px">
+	<div class="container" style="margin-top: 90px
+	height:100%;padding-bottom:0; padding-top: 70px;">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="row">
