@@ -73,6 +73,9 @@
 			margin-left: 20px;
 			margin-right: 20px;
 		}
+		.tooltip {
+		    position: fixed;
+		}
 	</style>
 
 @endsection
@@ -133,34 +136,34 @@
 											proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  </div>
 											<div class="col-md-1">
 												<button style="" class="btn btn-twitter waves-effect btn-circle waves-light">
-													<i class="fa fa-check"></i>
+													<i class="fa fa-check" data-toggle='tooltip' title='Selesai'></i>
 												</button>
 											</div>
 										</div>
 										<div class="col-md-12" style="padding-bottom: 10px;">
 											<div class="col-md-2 col-md-offset-1" style="font-weight: bolder;">01/02/2021</div>
-											<div class="col-md-6">Ngerjain sesuatu gitu biar bisa dibilang progress</div>
+											<div class="col-md-6">Isi formulir secara online</div>
 											<div class="col-md-1">
 												<button style="" class="btn btn-twitter waves-effect btn-circle waves-light">
-													<i class="fa fa-check"></i>
+													<i class="fa fa-check" data-toggle='tooltip' title='Selesai'></i>
 												</button>
 											</div>
 										</div>
 										<div class="col-md-12" style="padding-bottom: 10px;">
 											<div class="col-md-2 col-md-offset-1" style="font-weight: bolder;">01/02/2021</div>
-											<div class="col-md-6">Ngerjain sesuatu gitu biar bisa dibilang progress</div>
+											<div class="col-md-6">Anter berkas ke gubernur</div>
 											<div class="col-md-1">
 												<button style="" class="btn btn-twitter waves-effect btn-circle waves-light">
-													<i class="fa fa-check"></i>
+													<i class="fa fa-check" data-toggle='tooltip' title='Selesai'></i>
 												</button>
 											</div>
 										</div>
 										<div class="col-md-12" style="padding-bottom: 10px;">
 											<div class="col-md-2 col-md-offset-1" style="font-weight: bolder;">01/02/2021</div>
-											<div class="col-md-6">Ngerjain sesuatu gitu biar bisa dibilang progress</div>
+											<div class="col-md-6">Fotokopi 5 lembar</div>
 											<div class="col-md-1">
 												<button style="" class="btn btn-danger waves-effect btn-circle waves-light">
-													<i class="fa fa-close"></i>
+													<i class="fa fa-close" data-toggle='tooltip' title='Sedang dikerjakan'></i>
 												</button>
 											</div>
 										</div>
