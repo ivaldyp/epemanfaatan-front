@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
-use App\Rekanan_data;
+use App\Models\Rekanan_data;
 
 class PublicController extends Controller
 {
@@ -17,6 +17,21 @@ class PublicController extends Controller
     	$kode = $request->kode;
     	return view('pages.public_cek')
     			->with('kode', $kode);
+    }
+
+    public function tampilkode(Request $request)
+    {
+        $query = Rekanan_data::
+                    where('id_rekanan', $request->kode)
+                    ->where('sts', 1)
+                    ->first();
+
+        if (!($query)) {
+            return redirect('/cekkode')->with('message', 'Kode mitra tidak ditemukan');
+        }
+
+        return view('pages.public_tampil')
+                ->with('query', $query);
     }
 
     public function peta(Request $request)

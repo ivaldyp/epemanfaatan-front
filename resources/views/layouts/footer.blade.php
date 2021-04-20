@@ -3,7 +3,7 @@
 <!-- <footer class="" style="background-image: linear-gradient(to bottom right, #08415c, #001b3d);">
 	position: absolute; bottom: 0; width: 100%;-->
 <footer class="" style="background-color: #e1eedd; position: absolute; bottom: 0; width: 100%;">
-	<div class="container-fluid">
+	<div class="container-fluid hidden-xs hidden-sm">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="col-md-3 col-md-offset-2">
