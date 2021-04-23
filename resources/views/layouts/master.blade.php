@@ -45,8 +45,8 @@
 				<!-- Search input and Toggle icon -->
 				<ul class="nav navbar-top-links navbar-left">
 					<li>
-						<form role="search" class="app-search hidden-sm hidden-xs m-r-10">
-							<input type="text" placeholder="Cari Alamat..." class="form-control"> <a href=""><i class="fa fa-search"></i></a> 
+						<form role="search" class="app-search hidden-sm hidden-xs m-r-10" action="/{{ config('app.name') }}/data/cari">
+							<input type="text" placeholder="Cari Alamat..." class="form-control" name="key"> <a href=""><i class="fa fa-search"></i></a> 
 						</form>
 					</li>
 					<li class="mega-dropdown">
@@ -54,8 +54,8 @@
 						</a>
 						<ul class="dropdown-menu mailbox animated bounceInDown">
 							<li>
-								<form role="search" class="app-search visible-xs visible-sm p-l-10">
-									<input type="text" placeholder="Search..." class="form-control"> <a href=""><i class="fa fa-search"></i></a> 
+								<form role="search" class="app-search visible-xs visible-sm p-l-10" action="/{{ config('app.name') }}/data/cari">
+									<input type="text" placeholder="Search..." class="form-control" name="key"> <a href=""><i class="fa fa-search"></i></a> 
 								</form>
 								<hr style="margin-bottom: 0px">
 							</li>
@@ -87,7 +87,7 @@
 						<a href="javascript:void(0)">PERATURAN</a>
 					</li>
 					<li class="hidden-xs hidden-sm" style="padding-left: 5px; padding-right: 5px; font-weight: bold;">
-						<a href="javascript:void(0)">FAQ</a>
+						<a href="/{{ config('app.name') }}/faq">FAQ</a>
 					</li>
 
 

@@ -38,4 +38,13 @@ class PublicController extends Controller
     {
     	return view('pages.public_peta');
     }
+
+    public function petacari(Request $request)
+    {
+        $lat = $request->lat;
+        $lon = $request->lon;
+        return view('pages.public_petacari')
+                ->with('lat', $lat)
+                ->with('lon', $lon);
+    }    
 }

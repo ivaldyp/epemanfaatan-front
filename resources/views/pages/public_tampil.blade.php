@@ -35,8 +35,8 @@
 		.white-box {
 			box-shadow: 0 0 5px 0 rgb(0 0 0 / 20%);
 			border-radius: 5px;
-			padding-left: 5px;
-			padding-right: 5px;
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 		#input-kode {
 			text-align: center;
@@ -94,9 +94,9 @@
 		border-radius: 8px;">
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#home1" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true"><span class="visible-xs"><i class="ti-home"></i></span><span class="hidden-xs">Permohonan</span></a></li>
-                    <li role="presentation" class=""><a href="#profile1" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="false"><span class="visible-xs"><i class="ti-user"></i></span> <span class="hidden-xs">PKS Terbit</span></a></li>
-                    <li role="presentation" class=""><a href="#messages1" aria-controls="messages" role="tab" data-toggle="tab" aria-expanded="false"><span class="visible-xs"><i class="ti-email"></i></span> <span class="hidden-xs">Pembayaran</span></a></li>
+                    <li role="presentation" class="active"><a style="border-top-left-radius: 8px; border-top-right-radius: 8px;" href="#home1" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true"><span class="visible-xs"><i class="ti-home"></i></span><span class="hidden-xs">Permohonan</span></a></li>
+                    <li role="presentation" class=""><a style="border-top-left-radius: 8px; border-top-right-radius: 8px;" href="#profile1" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="false"><span class="visible-xs"><i class="ti-user"></i></span> <span class="hidden-xs">PKS Terbit</span></a></li>
+                    <li role="presentation" class=""><a style="border-top-left-radius: 8px; border-top-right-radius: 8px;" href="#messages1" aria-controls="messages" role="tab" data-toggle="tab" aria-expanded="false"><span class="visible-xs"><i class="ti-email"></i></span> <span class="hidden-xs">Pembayaran</span></a></li>
                 </ul>
                 <!-- Tab panes -->
                 <div class="tab-content" style="overflow-x: auto;">

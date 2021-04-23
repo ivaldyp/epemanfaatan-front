@@ -12,4 +12,10 @@ class DataController extends Controller
     	return view('pages.datas.table_idle')
     			->with('s', $status);
     }
+
+    public function cari(Request $request)
+    {
+    	return view('pages.datas.table_cari')
+    			->with('key', $request->key);
+    }
 }
