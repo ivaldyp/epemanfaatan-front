@@ -57,6 +57,7 @@
 <!-- ////////////////// -->
 
 @section('content')
+	<input type="hidden" name="datamap" id="datamap" value="{{ json_encode($datamap) }}">
 
 	<div class="container" style="margin-top: 90px; padding-left: 50px; padding-right: 50px;
 	height:100%;padding-bottom:0;">
@@ -92,37 +93,54 @@
 	<!-- Peta JS -->
 
 	<script>
+		var datamap = $("#datamap").val();
+		datamap = JSON.parse(datamap)['hasil'];
 
 		var mymap = L.map('issmap').setView([-6.2088, 106.8456], 11);
-		var lat = -6.2088;
-		var lon = 106.8456;
-		var colortable = ['red', 'blue', 'green', 'yellow', 'black'];
-
-		for (var i = 0; i <= 5; i++) {
-			var lon = lon + 0.1;
-			var circle = L.circle([-6.2088, lon], {
-			    color: colortable[i],
-			    fillColor: colortable[i],
-			    fillOpacity: 0.5,
-			    radius: 500
-			}).addTo(mymap);
-			circle.bindPopup("Hola");
-		}
-
 		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 			attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 		}).addTo(mymap);
+		
+		$.each( datamap, function( key, value ) {
 
-		var greenIcon = new L.Icon({
-		  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
-		  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-		  iconSize: [25, 41],
-		  iconAnchor: [12, 41],
-		  popupAnchor: [1, -34],
-		  shadowSize: [41, 41]
+			var greenIcon = new L.Icon({
+				iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+				shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+				iconSize: [25, 41],
+				iconAnchor: [12, 41],
+				popupAnchor: [1, -34],
+				shadowSize: [41, 41]
+			});
+			L.marker([value['lat'], value['lon']], {icon: greenIcon}).addTo(mymap).bindPopup("ASET "+value['nabar']+'<br>'+value['alamat']);
 		});
 
-		// L.marker([-6.2088, 106.8456], {icon: greenIcon}).addTo(mymap);
+
+		// var lat = -6.2088;
+		// var lon = 106.8456;
+		// var colortable = ['red', 'blue', 'green', 'yellow', 'black'];
+
+		// for (var i = 0; i <= 5; i++) {
+		// 	var lon = lon + 0.1;
+		// 	var circle = L.circle([-6.2088, lon], {
+		// 	    color: colortable[i],
+		// 	    fillColor: colortable[i],
+		// 	    fillOpacity: 0.5,
+		// 	    radius: 500
+		// 	}).addTo(mymap);
+		// 	circle.bindPopup("Hola");
+		// }
+
+
+		// var greenIcon = new L.Icon({
+		//   iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+		//   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+		//   iconSize: [25, 41],
+		//   iconAnchor: [12, 41],
+		//   popupAnchor: [1, -34],
+		//   shadowSize: [41, 41]
+		// });
+		// L.marker([-6.2088, 106.8456], {icon: greenIcon}).addTo(mymap).bindPopup("I am a green leaf.");
+
 	</script>
 
 @endsection
