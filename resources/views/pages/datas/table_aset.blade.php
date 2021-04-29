@@ -68,6 +68,7 @@
 						<table id="myTable" class="table table-striped">
 							<thead>
 								<tr>
+									<th>No</th>
 									<th>Nama</th>
 									<th>Tanggal Oleh</th>
 									<th>Alamat</th>
@@ -79,8 +80,9 @@
 								@if($datamap)
 									@foreach($datamap as $key => $data)
 									<tr>
-										<td>{{ $data->nabar }}</td>
-										<td>{{ date('d/M/Y', strtotime(str_replace('/', '-', $data->tgloleh ))) }}</td>
+										<td>{{ $key+1 }}</td>
+										<td>{{ ucwords(strtolower($data->nabar)) }}</td>
+										<td>{{ date('d-M-Y', strtotime(str_replace('/', '-', $data->tgloleh ))) }}</td>
 										<td>{{ $data->alamat }}</td>
 										<td>{{ $data->ukuran }} {{ $data->satuan }}</td>
 										<td>
