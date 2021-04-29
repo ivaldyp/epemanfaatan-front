@@ -65,6 +65,8 @@
 		<div class="row">
 			<input type="hidden" id="lat" value="{{ $lat }}">
 			<input type="hidden" id="lon" value="{{ $lon }}">
+			<input type="hidden" id="alamat" value="{{ $alamat }}">
+			<input type="hidden" id="nabar" value="{{ $nabar }}">
 			<div id="issmap">
 				
 			</div>
@@ -91,6 +93,8 @@
 
 		var lat = document.getElementById("lat").value;
 		var lon = document.getElementById("lon").value;
+		var alamat = document.getElementById("alamat").value;
+		var nabar = document.getElementById("nabar").value;
 
 		var mymap = L.map('issmap').setView([lat, lon], 11);
 		// var colortable = ['red', 'blue', 'green', 'yellow', 'black'];
@@ -116,7 +120,7 @@
 		  shadowSize: [41, 41]
 		});
 
-		L.marker([lat, lon], {icon: greenIcon}).addTo(mymap).bindPopup("HELLO!");
+		L.marker([lat, lon], {icon: greenIcon}).addTo(mymap).bindPopup("ASET "+nabar+'<br>'+alamat);
 	</script>
 
 

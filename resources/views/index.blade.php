@@ -160,7 +160,7 @@
 								</div>
 							</div>
 							<div class="col-md-6" style="height: 100px;">
-								<a href="data/idle?s=proses">
+								<a href="data/aset?s=proses">
 									<div class="white-box lainnya1">
 										<p class="" style="font-weight: bold; color: #fefbe9">DALAM PROSES</p>
 										<h1 style="color: #fefbe9" >5</h1>
@@ -171,7 +171,7 @@
 
 						<div class="row">
 							<div class="col-md-12">
-								<a href="data/idle?s=idle">
+								<a href="data/aset?s=siap">
 									<div class="white-box lainnya2">
 										<p class="" style="font-weight: bold; color: #fefbe9">ASET SIAP DIKERJASAMAKAN</p>
 										<h1 style="color: #fefbe9" >15</h1>
