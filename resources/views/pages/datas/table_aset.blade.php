@@ -86,7 +86,7 @@
 										<td>{{ $data->alamat }}</td>
 										<td>{{ $data->ukuran }} {{ $data->satuan }}</td>
 										<td>
-											<a href="/epemanfaatan/peta/cari" onclick="window.open('/epemanfaatan/peta/cari?lat={{ $data->lat }}&lon={{ $data->lon }}&alamat={{ $data->alamat }}&nabar={{ $data->nabar }}', 
+											<a href="/epemanfaatan/peta/cari" onclick="window.open('/epemanfaatan/peta/cari?lat={{ $data->lat }}&lon={{ $data->lon }}&alamat={{ $data->alamat }}&nabar={{ $data->nabar }}&kobar={{ $data->kobar }}', 
 						                        'newwindow', 
 						                        'width=960,height=720'); 
 						              			return false;">

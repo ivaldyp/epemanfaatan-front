@@ -52,10 +52,12 @@ class PublicController extends Controller
         $lon = $request->lon;
         $alamat = $request->alamat;
         $nabar = $request->nabar;
+        $kobar = $request->kobar;
         return view('pages.public_petacari')
                 ->with('lat', $lat)
                 ->with('lon', $lon)
                 ->with('nabar', $nabar)
+                ->with('kobar', $kobar)
                 ->with('alamat', $alamat);
     }    
 }

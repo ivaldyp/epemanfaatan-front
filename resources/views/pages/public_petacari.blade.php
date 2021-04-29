@@ -67,6 +67,7 @@
 			<input type="hidden" id="lon" value="{{ $lon }}">
 			<input type="hidden" id="alamat" value="{{ $alamat }}">
 			<input type="hidden" id="nabar" value="{{ $nabar }}">
+			<input type="hidden" id="kobar" value="{{ $kobar }}">
 			<div id="issmap">
 				
 			</div>
@@ -95,6 +96,7 @@
 		var lon = document.getElementById("lon").value;
 		var alamat = document.getElementById("alamat").value;
 		var nabar = document.getElementById("nabar").value;
+		var kobar = document.getElementById("kobar").value;
 
 		var mymap = L.map('issmap').setView([lat, lon], 11);
 		// var colortable = ['red', 'blue', 'green', 'yellow', 'black'];
@@ -111,8 +113,20 @@
 			attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 		}).addTo(mymap);
 
-		var greenIcon = new L.Icon({
-		  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+		if (kobar.substring(0, 2) == '01') {
+			col = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png';
+		} else if (kobar.substring(0, 2) == '02') {
+			col = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png';
+		} else if (kobar.substring(0, 2) == '03') {
+			col = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png';
+		} else if (kobar.substring(0, 2) == '04') {
+			col = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png';
+		} else if (kobar.substring(0, 2) == '05') {
+			col = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png';
+		}
+
+		var thisicon = new L.Icon({
+		  iconUrl: col,
 		  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
 		  iconSize: [25, 41],
 		  iconAnchor: [12, 41],
@@ -120,7 +134,7 @@
 		  shadowSize: [41, 41]
 		});
 
-		L.marker([lat, lon], {icon: greenIcon}).addTo(mymap).bindPopup("ASET "+nabar+'<br>'+alamat);
+		L.marker([lat, lon], {icon: thisicon}).addTo(mymap).bindPopup("ASET "+nabar+'<br>'+alamat);
 	</script>
 
 

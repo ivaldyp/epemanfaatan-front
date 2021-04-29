@@ -101,17 +101,30 @@
 			attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 		}).addTo(mymap);
 		
+		var col = "";
 		$.each( datamap, function( key, value ) {
 
-			var greenIcon = new L.Icon({
-				iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+			if (value['kobar'].substring(0, 2) == '01') {
+				col = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png';
+			} else if (value['kobar'].substring(0, 2) == '02') {
+				col = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png';
+			} else if (value['kobar'].substring(0, 2) == '03') {
+				col = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png';
+			} else if (value['kobar'].substring(0, 2) == '04') {
+				col = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png';
+			} else if (value['kobar'].substring(0, 2) == '05') {
+				col = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png';
+			}
+
+			var thisicon = new L.Icon({
+				iconUrl: col,
 				shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
 				iconSize: [25, 41],
 				iconAnchor: [12, 41],
 				popupAnchor: [1, -34],
 				shadowSize: [41, 41]
 			});
-			L.marker([value['lat'], value['lon']], {icon: greenIcon}).addTo(mymap).bindPopup("ASET "+value['nabar']+'<br>'+value['alamat']);
+			L.marker([value['lat'], value['lon']], {icon: thisicon}).addTo(mymap).bindPopup("ASET "+value['nabar']+'<br>'+value['alamat']);
 		});
 
 
