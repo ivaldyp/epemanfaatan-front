@@ -62,6 +62,15 @@
 									<option <?php if ($s == "siap"): ?> selected <?php endif ?> value="siap">Aset Siap Dikerjasamakan</option>
 								</select>
 							</div>
+							<div class="col-md-2">
+								<select class="form-control" name="k" id="kibnow" onchange="this.form.submit()">
+									<option <?php if ($k == "A"): ?> selected <?php endif ?> value="A">KIB A</option>
+									<option <?php if ($k == "B"): ?> selected <?php endif ?> value="B">KIB B</option>
+									<option <?php if ($k == "C"): ?> selected <?php endif ?> value="C">KIB C</option>
+									<option <?php if ($k == "D"): ?> selected <?php endif ?> value="D">KIB D</option>
+									<option <?php if ($k == "E"): ?> selected <?php endif ?> value="E">KIB E</option>
+								</select>
+							</div>
 						</div>
 					</form>
 					<div class="table-responsive">
@@ -82,7 +91,7 @@
 									<tr>
 										<td>{{ $key+1 }}</td>
 										<td>{{ ucwords(strtolower($data->nabar)) }}</td>
-										<td>{{ date('d-M-Y', strtotime(str_replace('/', '-', $data->tgloleh ))) }}</td>
+										<td>{{ date('d-M-Y', strtotime($data->tgloleh )) }}</td>
 										<td>{{ $data->alamat }}</td>
 										<td>{{ $data->ukuran }} {{ $data->satuan }}</td>
 										<td>

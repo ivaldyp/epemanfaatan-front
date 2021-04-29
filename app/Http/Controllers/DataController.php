@@ -9,10 +9,11 @@ class DataController extends Controller
     public function aset(Request $request)
     {
     	$status = $request->s;
+        $kib = $request->k;
 
         if ($status == "siap") {
             $client = new \GuzzleHttp\Client();
-            $response = $client->request('GET', 'https://aset.jakarta.go.id/ws/pemanfaatan.aspx?u=bpadws&p=!@bpad_dki@!&tipe=asetkerjasama');
+            $response = $client->request('GET', 'https://aset.jakarta.go.id/ws/pemanfaatan.aspx?u=bpadws&p=!@bpad_dki@!&tipe=asetkerjasama&kib='.$kib);
             $datamap = json_decode($response->getBody());
         } elseif ($status == "proses") {
             
@@ -22,6 +23,7 @@ class DataController extends Controller
 
     	return view('pages.datas.table_aset')
     			->with('s', $status)
+                ->with('k', $kib)
                 ->with('datamap', $datamap->hasil);
     }
 
