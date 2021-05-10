@@ -155,7 +155,7 @@
 						<div class="row">
 							<div class="col-md-6" style="height: 100px;">
 								<div class="white-box lainnya1">
-									<p class="" style="font-weight: bold; color: #fefbe9">TOTAL PKS</p>
+									<p class="" style="font-weight: bold; color: #fefbe9">PKS AKTIF</p>
 									<h1 style="color: #fefbe9" >-</h1>
 								</div>
 							</div>
