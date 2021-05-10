@@ -9,11 +9,17 @@ class DataController extends Controller
     public function aset(Request $request)
     {
     	$status = $request->s;
+
+        if ($request->kib != 'all') {
+            $kibnow = '&kib='.$request->k;
+        } else {
+            $kibnow = '';
+        }
         $kib = $request->k;
 
         if ($status == "siap") {
             $client = new \GuzzleHttp\Client();
-            $response = $client->request('GET', 'https://aset.jakarta.go.id/ws/pemanfaatan.aspx?u=bpadws&p=!@bpad_dki@!&tipe=asetkerjasama&kib='.$kib);
+            $response = $client->request('GET', 'https://aset.jakarta.go.id/ws/pemanfaatan.aspx?u=bpadws&p=!@bpad_dki@!&tipe=asetkerjasama'.$kibnow);
             $datamap = json_decode($response->getBody());
         } elseif ($status == "proses") {
             

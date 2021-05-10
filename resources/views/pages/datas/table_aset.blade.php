@@ -62,8 +62,9 @@
 									<option <?php if ($s == "siap"): ?> selected <?php endif ?> value="siap">Aset Siap Dikerjasamakan</option>
 								</select>
 							</div>
-							<div class="col-md-2">
+							<div class="col-md-3">
 								<select class="form-control" name="k" id="kibnow" onchange="this.form.submit()">
+									<option <?php if ($k == "all"): ?> selected <?php endif ?> value="all">--SEMUA--</option>
 									<option <?php if ($k == "A"): ?> selected <?php endif ?> value="A">Tanah</option>
 									<option <?php if ($k == "B"): ?> selected <?php endif ?> value="B">Peralatan dan Mesin</option>
 									<option <?php if ($k == "C"): ?> selected <?php endif ?> value="C">Gedung dan Bangunan</option>
@@ -95,12 +96,14 @@
 										<td>{{ $data->alamat }}</td>
 										<td>{{ $data->ukuran }} {{ $data->satuan }}</td>
 										<td>
+											@if(is_numeric($data->lat) && is_numeric($data->lon))
 											<a href="/epemanfaatan/peta/cari" onclick="window.open('/epemanfaatan/peta/cari?lat={{ $data->lat }}&lon={{ $data->lon }}&alamat={{ $data->alamat }}&nabar={{ $data->nabar }}&kobar={{ $data->kobar }}', 
 						                        'newwindow', 
 						                        'width=960,height=720'); 
 						              			return false;">
 												<i class="fa fa-map-marker" style="font-size: 20px; color: #2cabe3;"></i>
 											</a>
+											@endif
 										</td>
 									</tr>
 									@endforeach

@@ -116,13 +116,15 @@
 		if (kobar.substring(0, 2) == '01') {
 			col = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png';
 		} else if (kobar.substring(0, 2) == '02') {
-			col = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png';
+			col = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-purple.png';
 		} else if (kobar.substring(0, 2) == '03') {
 			col = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png';
 		} else if (kobar.substring(0, 2) == '04') {
 			col = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png';
 		} else if (kobar.substring(0, 2) == '05') {
 			col = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png';
+		} else {
+			col = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png';
 		}
 
 		var thisicon = new L.Icon({
