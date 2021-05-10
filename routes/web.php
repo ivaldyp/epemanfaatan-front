@@ -39,3 +39,4 @@ Route::group(['prefix' => 'data'], function () {
 });
 
 Route::get('/faq', 'OthersController@faq');
+Route::get('/peraturan', 'OthersController@peraturan');

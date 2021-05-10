@@ -24,10 +24,10 @@
 		body {
 			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 		}
-		.navbar-top-links li a{
+		.navbar-right li a{
 			transition: 0.2s;
 		}
-		.navbar-top-links li a:hover{
+		.navbar-right li a:hover{
 			background: transparent;
 			transform: scale(1.3);
 		}
@@ -59,7 +59,7 @@
 @section('content')
 	<input type="hidden" name="datamap" id="datamap" value="{{ json_encode($datamap) }}">
 
-	<div class="container" style="margin-top: 90px; padding-left: 50px; padding-right: 50px;
+	<div class="container" style="margin-top: 90px;
 	height:100%;padding-bottom:0;">
 		<div class="row">
 			<div class="white-box">

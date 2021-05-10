@@ -40,8 +40,6 @@ class PublicController extends Controller
         $response = $client->request('GET', 'https://aset.jakarta.go.id/ws/pemanfaatan.aspx?u=bpadws&p=!@bpad_dki@!&tipe=asetkerjasama');
         $datamap = json_decode($response->getBody());
 
-
-
     	return view('pages.public_peta')
                 ->with('datamap', $datamap);
     }

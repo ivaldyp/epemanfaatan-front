@@ -10,4 +10,9 @@ class OthersController extends Controller
     {
     	return view('pages.public_faq');
     }
+
+    public function peraturan(Request $request)
+    {
+    	return view('pages.public_peraturan');
+    }
 }

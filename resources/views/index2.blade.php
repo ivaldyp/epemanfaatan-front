@@ -23,10 +23,10 @@
 		.img-items:hover {
 			transform: scale(1.5);
 		}
-		.navbar-top-links li a{
+		.navbar-right li a{
 			transition: 0.2s;
 		}
-		.navbar-top-links li a:hover{
+		.navbar-right li a:hover{
 			background: transparent;
 			transform: scale(1.3);
 		}

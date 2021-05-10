@@ -23,10 +23,10 @@
 		.img-items:hover {
 			transform: scale(1.5);
 		}
-		.navbar-top-links li a{
+		.navbar-right li a{
 			transition: 0.2s;
 		}
-		.navbar-top-links li a:hover{
+		.navbar-right li a:hover{
 			background: transparent;
 			transform: scale(1.3);
 		}
@@ -126,13 +126,13 @@
 							<div class="col-md-6" style="height: 100px;">
 								<div class="white-box lainnya1">
 									<p class="" style="font-weight: bold; color: #fefbe9">SEWA</p>
-									<h1 style="color: #fefbe9" >10</h1> 
+									<h1 style="color: #fefbe9" >-</h1> 
 								</div>
 							</div>
 							<div class="col-md-6" style="height: 100px;">
 								<div class="white-box lainnya1">
 									<p class="" style="font-weight: bold; color: #fefbe9">PINJAM PAKAI</p>
-									<h1 style="color: #fefbe9" >20</h1>
+									<h1 style="color: #fefbe9" >-</h1>
 								</div>
 							</div>
 						</div>
@@ -141,13 +141,13 @@
 							<div class="col-md-6" style="height: 100px;">
 								<div class="white-box lainnya1">
 									<p class="" style="font-weight: bold; color: #fefbe9">BGS</p>
-									<h1 style="color: #fefbe9" >40</h1>
+									<h1 style="color: #fefbe9" >-</h1>
 								</div>
 							</div>
 							<div class="col-md-6" style="height: 100px;">
 								<div class="white-box lainnya1">
 									<p class="" style="font-weight: bold; color: #fefbe9">BSG</p>
-									<h1 style="color: #fefbe9" >15</h1>
+									<h1 style="color: #fefbe9" >-</h1>
 								</div>
 							</div>
 						</div>
@@ -156,14 +156,14 @@
 							<div class="col-md-6" style="height: 100px;">
 								<div class="white-box lainnya1">
 									<p class="" style="font-weight: bold; color: #fefbe9">TOTAL PKS</p>
-									<h1 style="color: #fefbe9" >85</h1>
+									<h1 style="color: #fefbe9" >-</h1>
 								</div>
 							</div>
 							<div class="col-md-6" style="height: 100px;">
 								<a href="data/aset?s=proses">
 									<div class="white-box lainnya1">
 										<p class="" style="font-weight: bold; color: #fefbe9">DALAM PROSES</p>
-										<h1 style="color: #fefbe9" >5</h1>
+										<h1 style="color: #fefbe9" >-</h1>
 									</div>
 								</a>
 							</div>
@@ -174,7 +174,7 @@
 								<a href="data/aset?s=siap">
 									<div class="white-box lainnya2">
 										<p class="" style="font-weight: bold; color: #fefbe9">ASET SIAP DIKERJASAMAKAN</p>
-										<h1 style="color: #fefbe9" >15</h1>
+										<h1 style="color: #fefbe9" >{{ $totalasd }}</h1>
 									</div>
 								</a>
 							</div>

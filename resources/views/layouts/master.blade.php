@@ -33,13 +33,15 @@
 			<div class="navbar-header" style="background: #e1eedd;">
 				<div class="top-left-part" style="border-right-width: 0px;">
 					<!-- Logo -->
-					<a class="logo" href="/{{ config('app.name') }}">
+					<a class="logo" href="/{{ config('app.name') }}" style="font-size: 20px; color: black; font-family: Helvetica, Arial, sans-serif">
 							<!-- Logo icon image, you can use font-icon also --><b>
+
 							<!--This is dark logo icon--><img src="/{{config('app.name')}}{{ ('/public/ample/plugins/images/admin-logo.png') }}" alt="home" class="dark-logo" /><!--This is light logo icon--><img src="/{{config('app.name')}}{{ ('/public/ample/plugins/images/admin-logo-dark.png') }}" alt="home" class="light-logo" />
 						 </b>
-							<!-- Logo text image you can use text also --><span class="hidden-xs">
+						 <span style="text-transform: lowercase; color: #313131" class="hidden-xs">e<strong style="text-transform: capitalize;">Pemanfaatan</strong></span>
+							{{-- <!-- Logo text image you can use text also --><span class="hidden-xs">
 							<!--This is dark logo text--><img src="/{{config('app.name')}}{{ ('/public/ample/plugins/images/admin-text.png') }}" alt="home" class="dark-logo" /><!--This is light logo text--><img src="/{{config('app.name')}}{{ ('/public/ample/plugins/images/admin-text-dark.png') }}" alt="home" class="light-logo" />
-						 </span>
+						 </span> --}}
 					</a>
 				</div>
 				<!-- /Logo -->
@@ -62,16 +64,10 @@
 							</li>
 							<li>
 								<div class="message-center">
-									<a href="#">
-										<h5>Lelang Selesai</h5>
-									</a>
-									<a href="#">
-										<h5>Jadwal Lelang</h5>
-									</a>
-									<a href="#">
-										<h5>Produk Hukum</h5>
-									</a>
-									
+									<a class="smallurl" href="/{{ config('app.name') }}/cekkode">CEK STATUS</a>
+									<a class="smallurl" href="/{{ config('app.name') }}/peta">PETA</a>
+									<a class="smallurl" href="/{{ config('app.name') }}/peraturan">PERATURAN</a>
+									<a class="smallurl" href="/{{ config('app.name') }}/faq">FAQ</a>
 								</div>
 							</li>
 						</ul>
@@ -85,7 +81,7 @@
 						<a href="/{{ config('app.name') }}/peta">PETA</a>
 					</li>
 					<li class="hidden-xs hidden-sm" style="padding-left: 5px; padding-right: 5px; font-weight: bold;">
-						<a href="javascript:void(0)">PERATURAN</a>
+						<a href="/{{ config('app.name') }}/peraturan">PERATURAN</a>
 					</li>
 					<li class="hidden-xs hidden-sm" style="padding-left: 5px; padding-right: 5px; font-weight: bold;">
 						<a href="/{{ config('app.name') }}/faq">FAQ</a>
