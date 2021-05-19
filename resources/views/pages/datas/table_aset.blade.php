@@ -55,6 +55,7 @@
 					<form method="get" action="/epemanfaatan/data/aset" class="form-horizontal" style="margin-top: 25px;">
 						<div class="form-group">
 							<label for="yearnow" class="col-md-1 control-label"> Filter </label>
+							{{-- 
 							<div class="col-md-3">
 								<select class="form-control" name="s" id="statnow" onchange="this.form.submit()">
 									<option <?php if ($s == "all"): ?> selected <?php endif ?> value="all">--SEMUA--</option>
@@ -62,6 +63,7 @@
 									<option <?php if ($s == "siap"): ?> selected <?php endif ?> value="siap">Aset Siap Dikerjasamakan</option>
 								</select>
 							</div>
+							--}}
 							<div class="col-md-3">
 								<select class="form-control" name="k" id="kibnow" onchange="this.form.submit()">
 									<option <?php if ($k == "all"): ?> selected <?php endif ?> value="all">--SEMUA--</option>
