@@ -49,7 +49,7 @@
 				<ul class="nav navbar-top-links navbar-left">
 					<li>
 						<form role="search" class="app-search hidden-sm hidden-xs m-r-10" action="/{{ config('app.name') }}/data/cari">
-							<input type="text" placeholder="Cari Alamat..." class="form-control" name="key"> <a href=""><i class="fa fa-search"></i></a> 
+							<input type="text" placeholder="Cari Alamat..." class="form-control" name="alamat"> <a href=""><i class="fa fa-search"></i></a> 
 						</form>
 					</li>
 					<li class="mega-dropdown">

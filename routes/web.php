@@ -35,7 +35,7 @@ Route::get('/peta/cari', 'PublicController@petacari');
 
 Route::group(['prefix' => 'data'], function () {
 	Route::get('/aset', 'DataController@aset');
-	Route::get('/cari', 'DataController@cari');
+	Route::get('/cari', 'DataController@aset');
 });
 
 Route::get('/faq', 'OthersController@faq');

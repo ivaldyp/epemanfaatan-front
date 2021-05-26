@@ -52,21 +52,27 @@
 			<div class="col-md-12">
 				<div class="white-box">
 					<h3 class="box-title m-b-0">Tabel Aset</h3>
-					<form method="get" action="/epemanfaatan/data/aset" class="form-horizontal" style="margin-top: 25px;">
+					
+					@if(!(is_null($alamat)) && $alamat != '')
+					<p class="text-muted m-b-30">Alamat yang dicari: <b>{{ $alamat }}</b></h4>
+					</p>
+					@endif
+					
+					<form method="get" action="/epemanfaatan/data/aset" class="form-horizontal" style="margin-top: 25px; margin-bottom: 25px;">
 						<div class="form-group">
 							<label for="yearnow" class="col-md-1 control-label"> Filter </label>
-							{{-- 
-							<div class="col-md-3">
+							
+							<!-- <div class="col-md-3">
 								<select class="form-control" name="s" id="statnow" onchange="this.form.submit()">
 									<option <?php if ($s == "all"): ?> selected <?php endif ?> value="all">--SEMUA--</option>
 									<option <?php if ($s == "proses"): ?> selected <?php endif ?> value="proses">Dalam Proses</option>
 									<option <?php if ($s == "siap"): ?> selected <?php endif ?> value="siap">Aset Siap Dikerjasamakan</option>
 								</select>
-							</div>
-							--}}
+							</div> -->
+
 							<div class="col-md-3">
 								<select class="form-control" name="k" id="kibnow" onchange="this.form.submit()">
-									<option <?php if ($k == "all"): ?> selected <?php endif ?> value="all">--SEMUA--</option>
+									<option <?php if ($k == "all"): ?> selected <?php endif ?> value="all">--SEMUA KIB--</option>
 									<option <?php if ($k == "A"): ?> selected <?php endif ?> value="A">Tanah</option>
 									<option <?php if ($k == "B"): ?> selected <?php endif ?> value="B">Peralatan dan Mesin</option>
 									<option <?php if ($k == "C"): ?> selected <?php endif ?> value="C">Gedung dan Bangunan</option>
@@ -74,9 +80,17 @@
 									<option <?php if ($k == "E"): ?> selected <?php endif ?> value="E">Aset Lainnya</option>
 								</select>
 							</div>
+							<div class="col-md-2">
+								<a href="/{{ config('app.name') }}/data/aset?k={{ $k }}">
+								<input type="button" name="btnResetAlamat" value="Reset Filter Alamat" class="btn btn-info"></a>
+							</div>
+							@if(!(is_null($alamat)) && $alamat != '')
+								<input type="hidden" name="alamat" value="{{ $alamat }}">
+							@endif
 						</div>
 					</form>
-					<div class="table-responsive">
+
+					<div class="table-responsive" style="">
 						<table id="myTable" class="table table-striped">
 							<thead>
 								<tr>
@@ -142,7 +156,7 @@
 		$(document).ready(function () {
 			var dt = $('#myTable').DataTable({
 				// pageLength : 5,
-				// "searching": false,
+				"searching": false,
 				// "lengthChange": false,
 			});
 
