@@ -80,10 +80,14 @@
 									<option <?php if ($k == "E"): ?> selected <?php endif ?> value="E">Aset Lainnya</option>
 								</select>
 							</div>
+							
+							@if(!(is_null($alamat)) && $alamat != '')
 							<div class="col-md-2">
 								<a href="/{{ config('app.name') }}/data/aset?k={{ $k }}">
 								<input type="button" name="btnResetAlamat" value="Reset Filter Alamat" class="btn btn-info"></a>
 							</div>
+							@endif
+
 							@if(!(is_null($alamat)) && $alamat != '')
 								<input type="hidden" name="alamat" value="{{ $alamat }}">
 							@endif
