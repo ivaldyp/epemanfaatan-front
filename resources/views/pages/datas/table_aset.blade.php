@@ -51,7 +51,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="white-box">
-					<h3 class="box-title m-b-0">Tabel Aset</h3>
+					<h3 class="box-title m-b-0">Aset Siap Dikerjasamakan</h3>
 					
 					@if(!(is_null($alamat)) && $alamat != '')
 					<p class="text-muted m-b-30">Alamat yang dicari: <b>{{ $alamat }}</b></h4>
@@ -99,7 +99,7 @@
 							<thead>
 								<tr>
 									<th>No</th>
-									<th>Nama</th>
+									<th>Pihak Ketiga</th>
 									<th>Tanggal Oleh</th>
 									<th>Alamat</th>
 									<th>Ukuran</th>
