@@ -66,7 +66,7 @@
 								<div class="message-center">
 									<a class="smallurl" href="/{{ config('app.name') }}/cekkode">CEK STATUS</a>
 									<a class="smallurl" href="/{{ config('app.name') }}/peta">PETA</a>
-									<a class="smallurl" href="/{{ config('app.name') }}/peraturan">PERATURAN</a>
+									<a class="smallurl" href="/{{ config('app.name') }}/peraturan">PROSEDUR</a>
 									<a class="smallurl" href="/{{ config('app.name') }}/faq">FAQ</a>
 								</div>
 							</li>
@@ -81,7 +81,7 @@
 						<a href="/{{ config('app.name') }}/peta">PETA</a>
 					</li>
 					<li class="hidden-xs hidden-sm" style="padding-left: 5px; padding-right: 5px; font-weight: bold;">
-						<a href="/{{ config('app.name') }}/peraturan">PERATURAN</a>
+						<a href="/{{ config('app.name') }}/peraturan">PROSEDUR</a>
 					</li>
 					<li class="hidden-xs hidden-sm" style="padding-left: 5px; padding-right: 5px; font-weight: bold;">
 						<a href="/{{ config('app.name') }}/faq">FAQ</a>

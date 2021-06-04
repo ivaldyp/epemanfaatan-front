@@ -62,7 +62,7 @@
                                 <a data-toggle="tab" href="#home3" aria-expanded="true"> <span class="visible-xs"><i class="ti-home"></i></span> <span class="hidden-xs">1. Cari</span> </a>
                             </li>
                             <li class="tab">
-                                <a data-toggle="tab" href="#profile3" aria-expanded="false"> <span class="visible-xs"><i class="ti-user"></i></span> <span class="hidden-xs">2. Hubungi</span> </a>
+                                <a data-toggle="tab" href="#profile3" aria-expanded="false"> <span class="visible-xs"><i class="ti-user"></i></span> <span class="hidden-xs">2. Ajukan</span> </a>
                             </li>
                             <li class="tab">
                                 <a aria-expanded="false" data-toggle="tab" href="#messages3"> <span class="visible-xs"><i class="ti-email"></i></span> <span class="hidden-xs">3. Pantau</span> </a>
@@ -70,15 +70,24 @@
                         </ul>
                         <div class="tab-content" style="vertical-align: middle;">
                             <div id="home3" class="tab-pane active">
-                                <h4 style="font-size: 30px; text-align: right; font-weight: bold; word-wrap: break-word; max-width: 20ch;">Cari aset yang ingin anda kerjasamakan</h4>
+                                <h4 style="font-size: 30px; font-weight: bold; word-wrap: break-word; ">
+	                                <i class="fa fa-search m-b-30" style="font-weight: bold;"></i><br>
+	                                Cari aset yang ingin dikerjasamakan
+	                            </h4>
                                 <div class="clearfix"></div>
                             </div>
                             <div id="profile3" class="tab-pane">
-                                <h4 style="font-size: 30px; text-align: right; font-weight: bold; word-wrap: break-word; max-width: 20ch;">Hubungi pegawai BPAD untuk memulai memanfaatkan aset</h4>
+                                <h4 style="font-size: 30px; font-weight: bold; word-wrap: break-word; ">
+	                                <i class="fa fa-file m-b-30" style="font-weight: bold;"></i><br>	
+	                                Ajukan permohonan pemanfaatan dengan berkoordinasi ke BPAD
+                            	</h4>
                                 <div class="clearfix"></div>
                             </div>
                             <div id="messages3" class="tab-pane">
-                                <h4 style="font-size: 30px; text-align: right; font-weight: bold; word-wrap: break-word; max-width: 20ch;">Pantau progress sampai aset tersebut berhasil anda kerjasamakan </h4>
+                                <h4 style="font-size: 30px; font-weight: bold; word-wrap: break-word; ">
+                                	<i class="fa fa-signal m-b-30" style="font-weight: bold;"></i><br>
+                                	Pantau perkembangan pengajuan permohonan pada website ini
+                            	</h4>
                                 <div class="clearfix"></div>
                             </div>
                         </div>
@@ -87,14 +96,14 @@
 			</div>
 		</div>
 
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-md-12">
 				<div class="white-box">
 					<h2 class="box-title">Produk Hukum</h2>
 					
 				</div>				
 			</div>
-		</div>
+		</div> -->
 	</div>
 
 @endsection('content')

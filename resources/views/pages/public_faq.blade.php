@@ -50,29 +50,44 @@
             	<div class="panel-group" role="tablist" aria-multiselectable="true">
 	                <div class="panel panel-default">
 	                    <div class="panel-heading" role="tab" id="headingOne">
-	                        <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="font-bold"> How can i purchase my admin ? </a> </h4> </div>
-	                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-	                        <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer la. </div>
+	                        <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="font-bold"> Apa itu sistem E-Pemanfaatan? </a> </h4> </div>
+	                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+	                        <div class="panel-body"> Sistem E-Pemanfaatan merupakan sistem dimana para mitra dapat mengetahui aset DKI Jakarta mana saja yang dapat dikerjasamakan. </div>
 	                    </div>
 	                </div>
 	                <div class="panel panel-default">
 	                    <div class="panel-heading" role="tab" id="headingTwo">
-	                        <h4 class="panel-title"> <a class="collapsed font-bold" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" > How to modify Navigation ? </a> </h4> </div>
+	                        <h4 class="panel-title"> <a class="collapsed font-bold" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" > Bagaimana mitra dapat mengetahui aset DKI Jakarta mana saja yang dapat dimanfaatkan? </a> </h4> </div>
 	                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-	                        <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, </div>
+	                        <div class="panel-body"> Mitra dapat menggunakan fitur "Peta" atau "Cari" untuk menampilkan seluruh aset DKI Jakarta yang dapat dimanfaatkan. </div>
 	                    </div>
 	                </div>
 	                <div class="panel panel-default">
 	                    <div class="panel-heading" role="tab" id="headingThree">
-	                        <h4 class="panel-title"> <a class="font-bold collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" > How to get yearly Support? </a> </h4> </div>
+	                        <h4 class="panel-title"> <a class="font-bold collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" > Aset jenis apa saja yang ditampilkan pada sistem E-Pemanfaatan? </a> </h4> </div>
 	                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-	                        <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, inable VHS. </div>
+	                        <div class="panel-body"> 
+	                        	Ada 5 jenis aset yang ditampilkan di sistem ini yaitu : <br>
+	                        	<ul>
+	                        		<li>KIB A: Aset Tanah</li>
+	                        		<li>KIB B: Peralatan dan Mesin</li>
+	                        		<li>KIB C: Gedung dan Bangunan</li>
+	                        		<li>KIB D: Jalan, Irigasi dan Jaringan</li>
+	                        		<li>KIB E: Aset Lainnya</li>
+	                        	</ul>
+	                        </div>
 	                    </div>
 	                </div>
 	                <div class="panel panel-default">
-	                    <div class="panel-heading" role="tab" id="headingFour"> <a class="collapsed font-bold panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour"> How to take a tour? </a> </div>
+	                    <div class="panel-heading" role="tab" id="headingFour"> <a class="collapsed font-bold panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour"> Apa yang harus dilakukan apabila telah memilih aset yang ingin dikerjasamakan? </a> </div>
 	                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-	                        <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, inable VHS. </div>
+	                        <div class="panel-body"> Mitra dapat langsung berkoordinasi dengan perwakilan subbidang Pemanfaatan pada BPAD DKI Jakarta untuk melanjutkan proses pemanfaatan aset DKI Jakarta. </div>
+	                    </div>
+	                </div>
+	                <div class="panel panel-default">
+	                    <div class="panel-heading" role="tab" id="headingFive"> <a class="collapsed font-bold panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive"> Apakah mitra dapat mengetahui perkembangan proses pemanfaatan aset yang sedang berjalan di BPAD DKI Jakarta? </a> </div>
+	                    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+	                        <div class="panel-body"> Mitra dapat dapat mengetahui perkembangan proses pemanfaatan melalui fitur "Cek Status". Cukup masukkan NPWP yang telah didaftarkan agar mitra dapat melihat perkembangan proses pemanfaatan yang sedang berjalan di BPAD. </div>
 	                    </div>
 	                </div>
 	            </div>
