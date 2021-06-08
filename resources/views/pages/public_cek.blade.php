@@ -93,7 +93,7 @@
 					@csrf
 					<div class="form-group ">
 						<div class="col-xs-12">
-							<input class="form-control" type="text" placeholder="Masukkan 15 digit NPWP (hanya angka)" required="" style="" id="input-kode" autocomplete="off" name="kode" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onpaste="return false">
+							<input class="form-control" type="text" placeholder="Masukkan 15 digit NPWP (hanya angka)" required="" data-mask="99.999.999.9-999.999" id="input-kode" autocomplete="off" name="kode"> 
 						</div>
 					</div>
 					<div class="form-group" id="div-show-npwp">
@@ -127,57 +127,13 @@
 	<script src="/{{config('app.name')}}{{ ('/public/ample/js/jquery.slimscroll.js') }}"></script>
 	<!-- Wave Effects -->
 	<script src="/{{config('app.name')}}{{ ('/public/ample/js/waves.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/public/ample/js/mask.js') }}"></script>
 	<!-- Toast js -->
 	<script src="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/toast-master/js/jquery.toast.js') }}"></script>
 	<script src="/{{config('app.name')}}{{ ('/public/ample/js/toastr.js') }}"></script>
 	<script type="text/javascript">
-		function formatNpwp(value) {
-			return value.replace(/(\d{2})(\d{3})(\d{3})(\d{1})(\d{3})(\d{3})/, '$1.$2.$3.$4-$5.$6');
-		}
-
-		(function($) {
-		  $.fn.inputFilter = function(inputFilter) {
-		    return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function() {
-		      if (inputFilter(this.value)) {
-		        this.oldValue = this.value;
-		        this.oldSelectionStart = this.selectionStart;
-		        this.oldSelectionEnd = this.selectionEnd;
-		      } else if (this.hasOwnProperty("oldValue")) {
-		        this.value = this.oldValue;
-		        this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
-		      } else {
-		        this.value = "";
-		      }
-		    });
-		  };
-		}(jQuery));
-
-		$('#div-show-npwp').hide();
-		$('#btn-npwp').prop('disabled', true);
-
-		$('#input-kode').keyup(function(e) {
-			var dInput = this.value;
-			// if (dInput.length>15) {
-			// 	$(this).val(dInput.substring(0,15));
-			// }
-			$("#input-kode").inputFilter(function(value) {
-  				return /^\d*$/.test(value) && (value === "" || parseInt(value) <= 1000000000000000); 
-  			});
-			if (dInput.length > 0) {
-				console.log(dInput.length);
-				$('#div-show-npwp').show();
-				$('#show-npwp').empty();
-				$('#show-npwp').text("NPWP: " + formatNpwp(dInput));
-			} else if (dInput.length == 0) {
-				$('#show-npwp').empty();
-				$('#div-show-npwp').hide();
-			}
-
-			if (dInput.length == 15) {
-				$('#btn-npwp').prop('disabled', false);
-			} else {
-				$('#btn-npwp').prop('disabled', true);
-			}
+		$("#input-kode").mouseup(function () {
+		    this.setSelectionRange(0,0);    
 		});
 
 		//Alerts
