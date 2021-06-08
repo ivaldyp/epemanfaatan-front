@@ -7,7 +7,7 @@
 	<!-- Menu CSS -->
 	<link href="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css') }}" rel="stylesheet">
 	<!-- toast CSS -->
-    <link href="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/toast-master/css/jquery.toast.css') }}" rel="stylesheet">
+	<link href="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/toast-master/css/jquery.toast.css') }}" rel="stylesheet">
 	<!-- animation CSS -->
 	<link href="/{{config('app.name')}}{{ ('/public/ample/css/animate.css') }}" rel="stylesheet">
 	<!-- Custom CSS -->
@@ -93,12 +93,17 @@
 					@csrf
 					<div class="form-group ">
 						<div class="col-xs-12">
-							<input class="form-control" type="text" placeholder="Masukkan Kode Unik Mitra" required="" style="" id="input-kode" autocomplete="off" name="kode">
+							<input class="form-control" type="text" placeholder="Masukkan 15 digit NPWP (hanya angka)" required="" style="" id="input-kode" autocomplete="off" name="kode" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onpaste="return false">
+						</div>
+					</div>
+					<div class="form-group" id="div-show-npwp">
+						<div>
+							<b><p class="text-static text-center" id="show-npwp"></p></b>
 						</div>
 					</div>
 					<div class="form-group text-center">
 						<div class="col-xs-12">
-							<button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light btn-cari" type="submit" style="background-color: #f0a04b; border-color: #f0a04b;">Cari</button>
+							<button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light btn-cari" type="submit" id="btn-npwp" style="background-color: #f0a04b; border-color: #f0a04b;">Cari</button>
 						</div>
 					</div>
 				</form>
@@ -124,48 +129,97 @@
 	<script src="/{{config('app.name')}}{{ ('/public/ample/js/waves.js') }}"></script>
 	<!-- Toast js -->
 	<script src="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/toast-master/js/jquery.toast.js') }}"></script>
-    <script src="/{{config('app.name')}}{{ ('/public/ample/js/toastr.js') }}"></script>
-    <script type="text/javascript">
-        //Alerts
-        $(".myadmin-alert .closed").click(function (event) {
-            $(this).parents(".myadmin-alert").fadeToggle(350);
-            return false;
-        });
-        /* Click to close */
-        $(".myadmin-alert-click").click(function (event) {
-            $(this).fadeToggle(350);
-            return false;
-        });
-        $(".showtop").click(function () {
-            $(".alerttop").fadeToggle(350);
-        });
-        $(".showtop2").click(function () {
-            $(".alerttop2").fadeToggle(350);
-        });
-        /** Alert Position Bottom  **/
-        $(".showbottom").click(function () {
-            $(".alertbottom").fadeToggle(350);
-        });
-        $(".showbottom2").click(function () {
-            $(".alertbottom2").fadeToggle(350);
-        });
-        /** Alert Position Top Left  **/
-        $("#showtopleft").click(function () {
-            $("#alerttopleft").fadeToggle(350);
-        });
-        /** Alert Position Top Right  **/
-        $("#showtopright").click(function () {
-            $("#alerttopright").fadeToggle(350);
-        });
-        /** Alert Position Bottom Left  **/
-        $("#showbottomleft").click(function () {
-            $("#alertbottomleft").fadeToggle(350);
-        });
-        /** Alert Position Bottom Right  **/
-        $("#showbottomright").click(function () {
-            $("#alertbottomright").fadeToggle(350);
-        });
-    </script>
+	<script src="/{{config('app.name')}}{{ ('/public/ample/js/toastr.js') }}"></script>
+	<script type="text/javascript">
+		function formatNpwp(value) {
+			return value.replace(/(\d{2})(\d{3})(\d{3})(\d{1})(\d{3})(\d{3})/, '$1.$2.$3.$4-$5.$6');
+		}
+
+		(function($) {
+		  $.fn.inputFilter = function(inputFilter) {
+		    return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function() {
+		      if (inputFilter(this.value)) {
+		        this.oldValue = this.value;
+		        this.oldSelectionStart = this.selectionStart;
+		        this.oldSelectionEnd = this.selectionEnd;
+		      } else if (this.hasOwnProperty("oldValue")) {
+		        this.value = this.oldValue;
+		        this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+		      } else {
+		        this.value = "";
+		      }
+		    });
+		  };
+		}(jQuery));
+
+		$('#div-show-npwp').hide();
+		$('#btn-npwp').prop('disabled', true);
+
+		$('#input-kode').keyup(function(e) {
+			var dInput = this.value;
+			// if (dInput.length>15) {
+			// 	$(this).val(dInput.substring(0,15));
+			// }
+			$("#input-kode").inputFilter(function(value) {
+  				return /^\d*$/.test(value) && (value === "" || parseInt(value) <= 1000000000000000); 
+  			});
+			if (dInput.length > 0) {
+				console.log(dInput.length);
+				$('#div-show-npwp').show();
+				$('#show-npwp').empty();
+				$('#show-npwp').text("NPWP: " + formatNpwp(dInput));
+			} else if (dInput.length == 0) {
+				$('#show-npwp').empty();
+				$('#div-show-npwp').hide();
+			}
+
+			if (dInput.length == 15) {
+				$('#btn-npwp').prop('disabled', false);
+			} else {
+				$('#btn-npwp').prop('disabled', true);
+			}
+		});
+
+		//Alerts
+		$(".myadmin-alert .closed").click(function (event) {
+			$(this).parents(".myadmin-alert").fadeToggle(350);
+			return false;
+		});
+		/* Click to close */
+		$(".myadmin-alert-click").click(function (event) {
+			$(this).fadeToggle(350);
+			return false;
+		});
+		$(".showtop").click(function () {
+			$(".alerttop").fadeToggle(350);
+		});
+		$(".showtop2").click(function () {
+			$(".alerttop2").fadeToggle(350);
+		});
+		/** Alert Position Bottom  **/
+		$(".showbottom").click(function () {
+			$(".alertbottom").fadeToggle(350);
+		});
+		$(".showbottom2").click(function () {
+			$(".alertbottom2").fadeToggle(350);
+		});
+		/** Alert Position Top Left  **/
+		$("#showtopleft").click(function () {
+			$("#alerttopleft").fadeToggle(350);
+		});
+		/** Alert Position Top Right  **/
+		$("#showtopright").click(function () {
+			$("#alerttopright").fadeToggle(350);
+		});
+		/** Alert Position Bottom Left  **/
+		$("#showbottomleft").click(function () {
+			$("#alertbottomleft").fadeToggle(350);
+		});
+		/** Alert Position Bottom Right  **/
+		$("#showbottomright").click(function () {
+			$("#alertbottomright").fadeToggle(350);
+		});
+	</script>
 	<!-- Custom Theme JavaScript -->
 	<script src="/{{config('app.name')}}{{ ('/public/ample/js/custom.min.js') }}"></script>
 	<!-- Style Switcher -->
