@@ -93,7 +93,8 @@
 					@csrf
 					<div class="form-group ">
 						<div class="col-xs-12">
-							<input class="form-control" type="text" placeholder="Masukkan 15 digit NPWP (hanya angka)" required="" data-mask="99.999.999.9-999.999" id="input-kode" autocomplete="off" name="kode"> 
+							<!-- <input class="form-control" type="text" placeholder="Masukkan 15 digit NPWP (hanya angka)" required="" data-mask="99.999.999.9-999.999" id="input-kode" autocomplete="off" name="kode">  -->
+							<input class="form-control" type="text" placeholder="Masukkan 15 digit NPWP (hanya angka)" required="" id="input-kode" autocomplete="off" name="kode"> 
 						</div>
 					</div>
 					<div class="form-group" id="div-show-npwp">
