@@ -70,24 +70,15 @@
                         </ul>
                         <div class="tab-content" style="vertical-align: middle;">
                             <div id="home3" class="tab-pane active">
-                                <h4 style="font-size: 30px; font-weight: bold; word-wrap: break-word; ">
-	                                <i class="fa fa-search m-b-30" style="font-weight: bold;"></i><br>
-	                                Cari aset yang ingin dikerjasamakan
-	                            </h4>
+	                            <img src="/{{config('app.name')}}{{ ('/public/img/prosedur/1.png') }}" width='100%' alt='1. Cari'/>
                                 <div class="clearfix"></div>
                             </div>
                             <div id="profile3" class="tab-pane">
-                                <h4 style="font-size: 30px; font-weight: bold; word-wrap: break-word; ">
-	                                <i class="fa fa-file m-b-30" style="font-weight: bold;"></i><br>	
-	                                Ajukan permohonan pemanfaatan dengan berkoordinasi ke BPAD
-                            	</h4>
+                                <img src="/{{config('app.name')}}{{ ('/public/img/prosedur/2.png') }}" width='100%' alt='2. Ajukan'/>
                                 <div class="clearfix"></div>
                             </div>
                             <div id="messages3" class="tab-pane">
-                                <h4 style="font-size: 30px; font-weight: bold; word-wrap: break-word; ">
-                                	<i class="fa fa-signal m-b-30" style="font-weight: bold;"></i><br>
-                                	Pantau perkembangan pengajuan permohonan pada website ini
-                            	</h4>
+                                <img src="/{{config('app.name')}}{{ ('/public/img/prosedur/3.png') }}" width='100%' alt='3. Pantau'/>
                                 <div class="clearfix"></div>
                             </div>
                         </div>

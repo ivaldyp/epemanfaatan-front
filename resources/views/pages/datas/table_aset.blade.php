@@ -117,11 +117,14 @@
 										<td>{{ $data->ukuran }} {{ $data->satuan }}</td>
 										<td>
 											@if(is_numeric($data->lat) && is_numeric($data->lon))
-											<a href="/epemanfaatan/peta/cari" onclick="window.open('/epemanfaatan/peta/cari?lat={{ $data->lat }}&lon={{ $data->lon }}&alamat={{ $data->alamat }}&nabar={{ $data->nabar }}&kobar={{ $data->kobar }}', 
+											<a href="/epemanfaatan/peta/cari" style="margin-right: 2px" onclick="window.open('/epemanfaatan/peta/cari?lat={{ $data->lat }}&lon={{ $data->lon }}&alamat={{ $data->alamat }}&nabar={{ $data->nabar }}&kobar={{ $data->kobar }}', 
 						                        'newwindow', 
 						                        'width=960,height=720'); 
-						              			return false;">
+						              			return false;" data-toggle="tooltip" title="Peta">
 												<i class="fa fa-map-marker" style="font-size: 20px; color: #2cabe3;"></i>
+											</a>
+											<a target="_blank" href="https://www.google.com/maps/place/{{$data->lat}}, {{$data->lon}}" data-toggle="tooltip" title="Google Maps">
+												<i class="fa fa-google text-success" style="font-size: 20px;"></i>
 											</a>
 											@endif
 										</td>
