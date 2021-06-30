@@ -21,17 +21,39 @@ class PublicController extends Controller
 
     public function tampilkode(Request $request)
     {
-        $query = Rekanan_data::
-                    where('id_rekanan', $request->kode)
-                    ->where('sts', 1)
-                    ->first();
+        // $query = Rekanan_data::
+        //             where('id_rekanan', $request->kode)
+        //             ->where('sts', 1)
+        //             ->first();
 
-        if (!($query)) {
-            return redirect('/cekkode')->with('message', 'Kode mitra tidak ditemukan');
+        // if (!($query)) {
+        //     return redirect('/cekkode')->with('message', 'Kode mitra tidak ditemukan');
+        // }
+
+        $kode = str_replace('.', '', $request->kode);
+        $kode = str_replace('-', '', $kode);
+        
+        $client = new \GuzzleHttp\Client();
+        $respprogress = $client->request('GET', 'http://aset.jakarta.go.id/ws/pemanfaatan.aspx?u=bpadws&p=!@bpad_dki@!&tipe=progress&npwp='.$kode);
+        $dataprogress = json_decode($respprogress->getBody())->hasil;
+
+        $client2 = new \GuzzleHttp\Client();
+        $resphistory = $client2->request('GET', 'https://aset.jakarta.go.id/ws/pemanfaatan.aspx?u=bpadws&p=!@bpad_dki@!&tipe=history&npwp='.$kode);
+        $datahistory = json_decode($resphistory->getBody())->hasil;
+
+        if (isset($datahistory[0]->nm_rekanan)) {
+            $nm_rekanan = $datahistory[0]->nm_rekanan;
+        } else {
+            $nm_rekanan = '';
         }
+        // var_dump(json_encode($datahistory));
+        // die();
 
         return view('pages.public_tampil')
-                ->with('query', $query);
+                ->with('nm_rekanan', $nm_rekanan)
+                ->with('npwp', $request->kode)
+                ->with('datahistory', $datahistory)
+                ->with('dataprogress', $dataprogress);
     }
 
     public function peta(Request $request)

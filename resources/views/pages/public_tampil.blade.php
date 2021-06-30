@@ -95,8 +95,8 @@
 
 	<div class="container" style="margin-top: 75px; padding-left: 50px; padding-right: 50px; background-color: #fefbe9">
 		<div class="row text-center m-b-20" >
-			<h2 class="" style="font-weight: bold;">{{ $query['nm_rekanan'] }}</h2>
-			<h3>{{ $query['id_rekanan'] }}</h3>
+			<h2 class="" style="font-weight: bold;">{{ $nm_rekanan }}</h2>
+			<h3 <?php if ($nm_rekanan == ''): ?> style="font-weight: bold;" <?php endif ?> >NPWP: {{ $npwp }}</h3>
 		</div>
 		<div class="row">
 			<!-- <div class="white-box" style="background-color: #f7fafc; box-shadow: 0 0 5px 0 rgb(0 0 0 / 20%);
@@ -116,248 +116,88 @@
 						<table id="demo-foo-accordion" class="table toggle-circle" cellspacing="14">
 							<thead>
 								<tr>
-									<th data-toggle="true"> No. </th>
-									<th>Perihal </th>
-									<th>Alamat </th>
-									<th>Peruntukan </th>
-									<th>Luas</th>
-									<th>Durasi</th>
+									<th data-toggle="true"></th>
+									<th>Nomor Referensi</th>
 									<th data-hide="all"> </th>
 								</tr>
 							</thead>
 							<tbody>
+								@for($i=0; $i < count($dataprogress); $i++)
+								<?php $flag = 0; ?>
 								<tr class="footable-even">
-									<td>ABC-02-BBB</td>
-									<td>Permohonan PKS gitu</td>
-									<td>JL. ABC no. 23</td>
-									<td>Tempat Sampah</td>
-									<td>1000 m2</td>
-									<td>02/04/2021 - 03/05/2025</td>
+									<td></td>
+									<td>{{ $dataprogress[$i]->noref }}</td>
 									<td>
 										<div class="col-md-12 hidden-xs hidden-sm" style="padding-bottom: 10px; font-weight: bold;">
+											<div class="col-md-4">Kegiatan</div>
 											<div class="col-md-2 col-md-offset-1">Tanggal</div>
-											<div class="col-md-6">Kegiatan</div>
 										</div>
+										@while(true)
 										<div class="col-md-12" style="padding-bottom: 10px;">
-											<div class="col-md-2 col-md-offset-1" style="font-weight: bolder;">01/02/2021</div>
-											<div class="col-md-6"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-											tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-											quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-											consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-											cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-											proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  </div>
+											<div class="col-md-4">{{ $dataprogress[$i]->nomor }}. {{ $dataprogress[$i]->status }}</div>
+											<div class="col-md-2 col-md-offset-1" style="font-weight: bolder;">{{ $dataprogress[$i]->tanggal_proses }}</div>
 											<div class="col-md-1">
+												@if(isset($dataprogress[$i+1]->noref) && $dataprogress[$i]->noref == $dataprogress[$i+1]->noref)
 												<button style="" class="btn btn-twitter waves-effect btn-circle waves-light">
 													<i class="fa fa-check" data-toggle='tooltip' title='Selesai'></i>
 												</button>
-											</div>
-										</div>
-										<div class="col-md-12" style="padding-bottom: 10px;">
-											<div class="col-md-2 col-md-offset-1" style="font-weight: bolder;">01/02/2021</div>
-											<div class="col-md-6">Isi formulir secara online</div>
-											<div class="col-md-1">
+												<?php $i++; ?>
+												@elseif($dataprogress[$i]->nomor == 14)
 												<button style="" class="btn btn-twitter waves-effect btn-circle waves-light">
 													<i class="fa fa-check" data-toggle='tooltip' title='Selesai'></i>
 												</button>
-											</div>
-										</div>
-										<div class="col-md-12" style="padding-bottom: 10px;">
-											<div class="col-md-2 col-md-offset-1" style="font-weight: bolder;">01/02/2021</div>
-											<div class="col-md-6">Anter berkas ke gubernur</div>
-											<div class="col-md-1">
-												<button style="" class="btn btn-twitter waves-effect btn-circle waves-light">
-													<i class="fa fa-check" data-toggle='tooltip' title='Selesai'></i>
-												</button>
-											</div>
-										</div>
-										<div class="col-md-12" style="padding-bottom: 10px;">
-											<div class="col-md-2 col-md-offset-1" style="font-weight: bolder;">01/02/2021</div>
-											<div class="col-md-6">Fotokopi 5 lembar</div>
-											<div class="col-md-1">
+												<?php $flag = 1; ?>
+												@else
 												<button style="" class="btn btn-danger waves-effect btn-circle waves-light">
 													<i class="fa fa-close" data-toggle='tooltip' title='Sedang dikerjakan'></i>
 												</button>
+												<?php $flag = 1; ?>
+												@endif
 											</div>
 										</div>
+										<?php if ($flag == 1) break; ?>
+										@endwhile
 									</td>
 								</tr>
-								<tr class="footable-even">
-									<td>ABC-02-BBB</td>
-									<td>Permohonan PKS gitu</td>
-									<td>JL. ABC no. 23</td>
-									<td>Tempat Sampah</td>
-									<td>1000 m2</td>
-									<td>02/04/2021 - 03/05/2025</td>
-									<td>
-										<div class="col-md-12 hidden-xs hidden-sm" style="padding-bottom: 10px; font-weight: bold;">
-											<div class="col-md-2 col-md-offset-1">Tanggal</div>
-											<div class="col-md-6">Kegiatan</div>
-										</div>
-										<div class="col-md-12" style="padding-bottom: 10px;">
-											<div class="col-md-2 col-md-offset-1" style="font-weight: bolder;">01/02/2021</div>
-											<div class="col-md-6"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-											tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-											quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-											consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-											cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-											proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  </div>
-											<div class="col-md-1">
-												<button style="" class="btn btn-twitter waves-effect btn-circle waves-light">
-													<i class="fa fa-check"></i>
-												</button>
-											</div>
-										</div>
-										<div class="col-md-12" style="padding-bottom: 10px;">
-											<div class="col-md-2 col-md-offset-1" style="font-weight: bolder;">01/02/2021</div>
-											<div class="col-md-6">Ngerjain sesuatu gitu biar bisa dibilang progress</div>
-											<div class="col-md-1">
-												<button style="" class="btn btn-twitter waves-effect btn-circle waves-light">
-													<i class="fa fa-check"></i>
-												</button>
-											</div>
-										</div>
-										<div class="col-md-12" style="padding-bottom: 10px;">
-											<div class="col-md-2 col-md-offset-1" style="font-weight: bolder;">01/02/2021</div>
-											<div class="col-md-6">Ngerjain sesuatu gitu biar bisa dibilang progress</div>
-											<div class="col-md-1">
-												<button style="" class="btn btn-twitter waves-effect btn-circle waves-light">
-													<i class="fa fa-check"></i>
-												</button>
-											</div>
-										</div>
-										<div class="col-md-12" style="padding-bottom: 10px;">
-											<div class="col-md-2 col-md-offset-1" style="font-weight: bolder;">01/02/2021</div>
-											<div class="col-md-6">Ngerjain sesuatu gitu biar bisa dibilang progress</div>
-											<div class="col-md-1">
-												<button style="" class="btn btn-danger waves-effect btn-circle waves-light">
-													<i class="fa fa-close"></i>
-												</button>
-											</div>
-										</div>
-									</td>
-								</tr>
-								<tr class="footable-even">
-									<td>ABC-02-BBB</td>
-									<td>Permohonan PKS gitu</td>
-									<td>JL. ABC no. 23</td>
-									<td>Tempat Sampah</td>
-									<td>1000 m2</td>
-									<td>02/04/2021 - 03/05/2025</td>
-									<td>
-										<div class="col-md-12 hidden-xs hidden-sm" style="padding-bottom: 10px; font-weight: bold;">
-											<div class="col-md-2 col-md-offset-1">Tanggal</div>
-											<div class="col-md-6">Kegiatan</div>
-										</div>
-										<div class="col-md-12" style="padding-bottom: 10px;">
-											<div class="col-md-2 col-md-offset-1" style="font-weight: bolder;">01/02/2021</div>
-											<div class="col-md-6"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-											tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-											quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-											consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-											cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-											proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  </div>
-											<div class="col-md-1">
-												<button style="" class="btn btn-twitter waves-effect btn-circle waves-light">
-													<i class="fa fa-check"></i>
-												</button>
-											</div>
-										</div>
-										<div class="col-md-12" style="padding-bottom: 10px;">
-											<div class="col-md-2 col-md-offset-1" style="font-weight: bolder;">01/02/2021</div>
-											<div class="col-md-6">Ngerjain sesuatu gitu biar bisa dibilang progress</div>
-											<div class="col-md-1">
-												<button style="" class="btn btn-twitter waves-effect btn-circle waves-light">
-													<i class="fa fa-check"></i>
-												</button>
-											</div>
-										</div>
-										<div class="col-md-12" style="padding-bottom: 10px;">
-											<div class="col-md-2 col-md-offset-1" style="font-weight: bolder;">01/02/2021</div>
-											<div class="col-md-6">Ngerjain sesuatu gitu biar bisa dibilang progress</div>
-											<div class="col-md-1">
-												<button style="" class="btn btn-twitter waves-effect btn-circle waves-light">
-													<i class="fa fa-check"></i>
-												</button>
-											</div>
-										</div>
-										<div class="col-md-12" style="padding-bottom: 10px;">
-											<div class="col-md-2 col-md-offset-1" style="font-weight: bolder;">01/02/2021</div>
-											<div class="col-md-6">Ngerjain sesuatu gitu biar bisa dibilang progress</div>
-											<div class="col-md-1">
-												<button style="" class="btn btn-danger waves-effect btn-circle waves-light">
-													<i class="fa fa-close"></i>
-												</button>
-											</div>
-										</div>
-									</td>
-								</tr>
-								<tr class="footable-even">
-									<td>ABC-02-BBB</td>
-									<td>Permohonan PKS gitu</td>
-									<td>JL. ABC no. 23</td>
-									<td>Tempat Sampah</td>
-									<td>1000 m2</td>
-									<td>02/04/2021 - 03/05/2025</td>
-									<td>
-										<div class="col-md-12 hidden-xs hidden-sm" style="padding-bottom: 10px; font-weight: bold;">
-											<div class="col-md-2 col-md-offset-1">Tanggal</div>
-											<div class="col-md-6">Kegiatan</div>
-										</div>
-										<div class="col-md-12" style="padding-bottom: 10px;">
-											<div class="col-md-2 col-md-offset-1" style="font-weight: bolder;">01/02/2021</div>
-											<div class="col-md-6"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-											tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-											quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-											consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-											cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-											proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  </div>
-											<div class="col-md-1">
-												<button style="" class="btn btn-twitter waves-effect btn-circle waves-light">
-													<i class="fa fa-check"></i>
-												</button>
-											</div>
-										</div>
-										<div class="col-md-12" style="padding-bottom: 10px;">
-											<div class="col-md-2 col-md-offset-1" style="font-weight: bolder;">01/02/2021</div>
-											<div class="col-md-6">Ngerjain sesuatu gitu biar bisa dibilang progress</div>
-											<div class="col-md-1">
-												<button style="" class="btn btn-twitter waves-effect btn-circle waves-light">
-													<i class="fa fa-check"></i>
-												</button>
-											</div>
-										</div>
-										<div class="col-md-12" style="padding-bottom: 10px;">
-											<div class="col-md-2 col-md-offset-1" style="font-weight: bolder;">01/02/2021</div>
-											<div class="col-md-6">Ngerjain sesuatu gitu biar bisa dibilang progress</div>
-											<div class="col-md-1">
-												<button style="" class="btn btn-twitter waves-effect btn-circle waves-light">
-													<i class="fa fa-check"></i>
-												</button>
-											</div>
-										</div>
-										<div class="col-md-12" style="padding-bottom: 10px;">
-											<div class="col-md-2 col-md-offset-1" style="font-weight: bolder;">01/02/2021</div>
-											<div class="col-md-6">Ngerjain sesuatu gitu biar bisa dibilang progress</div>
-											<div class="col-md-1">
-												<button style="" class="btn btn-danger waves-effect btn-circle waves-light">
-													<i class="fa fa-close"></i>
-												</button>
-											</div>
-										</div>
-									</td>
-								</tr>
+								@endfor
 							</tbody>
+							
 						</table>
 
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="profile1">
-						<div class="col-md-6">
-							<h3>Lets check profile</h3>
-							<h4>you can use it with the small code</h4> </div>
-						<div class="col-md-5 pull-right">
-							<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a.</p>
+						<div class="col-md-12">
+							<div class="table-responsive">
+								<table class="table table-hover display compact">
+									<thead>
+										<tr>
+											<th>No</th>
+											<th>Perjanjian</th>
+											<th>Barang</th>
+											<th>Peruntukan</th>
+											<th>Ukuran</th>
+											<th>Alamat</th>
+											<th>Nomor PKS</th>
+											<th>Durasi</th>
+										</tr>
+									</thead>
+									<tbody>
+										@foreach($datahistory as $key => $his)
+											<tr>
+												<td>{{ $key + 1 }}</td>
+												<td>{{ $his->nm_perjanjian }}</td>
+												<td>{{ ucwords(strtolower($his->nabar)) }}</td>
+												<td>{{ $his->nm_peruntukan }}</td>
+												<td>{{ $his->ukuran }} {{ $his->satuan }}</td>
+												<td>{{ $his->alamat }}</td>
+												<td>{{ $his->no_pks }}</td>
+												<td>{{ date('d/M/Y', strtotime($his->tgl_awalpks)) }} - {{ date('d/M/Y', strtotime($his->tgl_akhirpks)) }}</td>
+											</tr>
+										@endforeach
+									</tbody>
+								</table>
+							</div>
 						</div>
-						<div class="clearfix"></div>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="messages1">
 						<div class="col-md-6">
@@ -390,14 +230,6 @@
 	<!-- Wave Effects -->
 	<script src="/{{config('app.name')}}{{ ('/public/ample/js/waves.js') }}"></script>
 	<!-- Custom Theme JavaScript -->
-	<script src="/{{config('app.name')}}{{ ('/public/ample/js/cbpFWTabs.js') }}"></script>
-	<script type="text/javascript">
-		(function () {
-				[].slice.call(document.querySelectorAll('.sttabs')).forEach(function (el) {
-				new CBPFWTabs(el);
-			});
-		})();
-	</script>
 	<script src="/{{config('app.name')}}{{ ('/public/ample/js/custom.min.js') }}"></script>
 	<!-- Footable -->
 	<script src="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/footable/js/footable.all.min.js') }}"></script>
