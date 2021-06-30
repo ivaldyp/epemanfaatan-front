@@ -112,7 +112,11 @@
 				<!-- Tab panes -->
 				<div class="tab-content" style="overflow-x: auto;">
 					<div role="tabpanel" class="tab-pane fade active in" id="home1">
-
+						@if (!(isset($dataprogress[0]->nomor))) 
+						<div class="col-md-12">
+							<h2>Tidak ada data</h2>
+						</div>
+						@else
 						<table id="demo-foo-accordion" class="table toggle-circle" cellspacing="14">
 							<thead>
 								<tr>
@@ -161,12 +165,14 @@
 								</tr>
 								@endfor
 							</tbody>
-							
 						</table>
-
+						@endif
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="profile1">
 						<div class="col-md-12">
+							@if(!(isset($datahistory[0]->nm_rekanan)))
+							<h2>Tidak ada data</h2>
+							@else
 							<div class="table-responsive">
 								<table class="table table-hover display compact">
 									<thead>
@@ -197,6 +203,7 @@
 									</tbody>
 								</table>
 							</div>
+							@endif
 						</div>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="messages1">
