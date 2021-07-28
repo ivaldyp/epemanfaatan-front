@@ -34,12 +34,12 @@ class PublicController extends Controller
         $kode = str_replace('-', '', $kode);
         
         $client = new \GuzzleHttp\Client();
-        $respprogress = $client->request('GET', 'http://aset.jakarta.go.id/ws/pemanfaatan.aspx?u=bpadws&p=!@bpad_dki@!&tipe=progress&npwp='.$kode);
-        $dataprogress = json_decode($respprogress->getBody())->hasil;
 
-        $client2 = new \GuzzleHttp\Client();
-        $resphistory = $client2->request('GET', 'https://aset.jakarta.go.id/ws/pemanfaatan.aspx?u=bpadws&p=!@bpad_dki@!&tipe=history&npwp='.$kode);
+        // $client2 = new \GuzzleHttp\Client();
+        $resphistory = $client->request('GET', 'https://aset.jakarta.go.id/ws/pemanfaatan.aspx?u=bpadws&p=!@bpad_dki@!&tipe=history&npwp='.$kode);
         $datahistory = json_decode($resphistory->getBody())->hasil;
+        $respprogress = $client->request('GET', 'https://aset.jakarta.go.id/ws/pemanfaatan.aspx?u=bpadws&p=!@bpad_dki@!&tipe=progress&npwp='.$kode);
+        $dataprogress = json_decode($respprogress->getBody())->hasil;
 
         if (isset($datahistory[0]->nm_rekanan)) {
             $nm_rekanan = $datahistory[0]->nm_rekanan;
@@ -48,6 +48,8 @@ class PublicController extends Controller
         }
         // var_dump(json_encode($datahistory));
         // die();
+
+        // $datahistory = NULL;
 
         return view('pages.public_tampil')
                 ->with('nm_rekanan', $nm_rekanan)
