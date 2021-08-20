@@ -122,6 +122,10 @@
 								<tr>
 									<th data-toggle="true"></th>
 									<th>Nomor Referensi</th>
+									<th>No Surat</th>
+									<th>Tgl Surat</th>
+									<th class="col-md-4">Ringkasan</th>
+									<th>Aset yang dikerjasamakan</th>
 									<th data-hide="all"> </th>
 								</tr>
 							</thead>
@@ -131,14 +135,51 @@
 								<tr class="footable-even">
 									<td></td>
 									<td>{{ $dataprogress[$i]->noref }}</td>
+									<td>{{ $dataprogress[$i]->no_surat ? $dataprogress[$i]->no_surat : "-"}}</td>
+									<td>
+										{{ $dataprogress[$i]->tgl_surat ? date("d-M-Y", strtotime($dataprogress[$i]->tgl_surat)) : "-"}}
+									</td>
+									<td>{{ $dataprogress[$i]->ringkasan }}</td>
+									<td><button class="btn btn-info" style="background-color: #f6c453; border: #f6c453" data-toggle="modal" data-target="#modal-aset-{{ $i }}">Lihat Aset</button></td>
+									<div id="modal-aset-{{$i}}" class="modal fade" role="dialog">
+										<div class="modal-dialog modal-lg">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h4 class="modal-title"><b>Aset yang dikerjasamakan</b></h4>
+												</div>
+												<div class="modal-body">
+													<div class="col-md-12 hidden-xs hidden-sm" style="padding-bottom: 10px; font-weight: bold;">
+														<div class="col-md-1">No</div>
+														<div class="col-md-5">Alamat</div>
+														<div class="col-md-2">Ukuran</div>
+														<div class="col-md-2">Tanggal Oleh</div>
+													</div>
+													@foreach($dataprogress[$i]->aset as $key => $aset)
+													<div class="col-md-12" style="margin-bottom: 10px">
+														<div class="col-md-1">{{ $key+1 }}</div>
+														<div class="col-md-5">{{ $aset->alamat }}</div>
+														<div class="col-md-2">{{ $aset->ukuran }} {{ $aset->satuan }}</div>
+														<div class="col-md-2">{{ date("d-M-Y", strtotime($aset->tgloleh)) }}</div>
+													</div>
+													@endforeach
+													<div class="clearfix"></div>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-default pull-right" style="margin-right: 10px" data-dismiss="modal">Close</button>
+												</div>
+											</div>
+										</div>
+									</div>
 									<td>
 										<div class="col-md-12 hidden-xs hidden-sm" style="padding-bottom: 10px; font-weight: bold;">
 											<div class="col-md-4">Kegiatan</div>
 											<div class="col-md-2 col-md-offset-1">Tanggal</div>
 										</div>
+										<?php $nomor = 1; ?>
 										@while(true)
 										<div class="col-md-12" style="padding-bottom: 10px;">
-											<div class="col-md-4">{{ $dataprogress[$i]->nomor }}. {{ $dataprogress[$i]->status }}</div>
+											<div class="col-md-4">{{ $nomor }}. {{ $dataprogress[$i]->status }}</div>
+											<?php $nomor++; ?>
 											<div class="col-md-2 col-md-offset-1" style="font-weight: bolder;">{{ $dataprogress[$i]->tanggal_proses }}</div>
 											<div class="col-md-1">
 												@if(isset($dataprogress[$i+1]->noref) && $dataprogress[$i]->noref == $dataprogress[$i+1]->noref)
@@ -163,6 +204,7 @@
 										@endwhile
 									</td>
 								</tr>
+								
 								@endfor
 							</tbody>
 						</table>

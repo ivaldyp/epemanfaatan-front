@@ -8,7 +8,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<link rel="icon" type="image/png" sizes="16x16" href="/{{config('app.name')}}{{ ('/public/plugins/images/favicon.png') }}">
-	<title>ePemanfaatan</title>
+	<title>Monitoring Pemanfaatan</title>
 
 	@yield('css')
 	

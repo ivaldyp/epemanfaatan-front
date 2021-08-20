@@ -46,10 +46,6 @@ class PublicController extends Controller
         } else {
             $nm_rekanan = '';
         }
-        // var_dump(json_encode($datahistory));
-        // die();
-
-        // $datahistory = NULL;
 
         return view('pages.public_tampil')
                 ->with('nm_rekanan', $nm_rekanan)
