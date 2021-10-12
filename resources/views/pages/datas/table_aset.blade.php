@@ -99,8 +99,8 @@
 							<thead>
 								<tr>
 									<th>No</th>
-									<th>Pihak Ketiga</th>
-									<th>Tanggal Oleh</th>
+									<th>Jenis Aset</th>
+									{{-- <th>Tanggal Oleh</th> --}}
 									<th>Alamat</th>
 									<th>Ukuran</th>
 									<th>Lokasi</th>
@@ -112,7 +112,7 @@
 									<tr>
 										<td>{{ $key+1 }}</td>
 										<td>{{ ucwords(strtolower($data->nabar)) }}</td>
-										<td>{{ date('d-M-Y', strtotime($data->tgloleh )) }}</td>
+										{{-- <td>{{ date('d-M-Y', strtotime($data->tgloleh )) }}</td> --}}
 										<td>{{ $data->alamat }}</td>
 										<td>{{ $data->ukuran }} {{ $data->satuan }}</td>
 										<td>
