@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<link rel="icon" type="image/png" sizes="16x16" href="/{{config('app.name')}}{{ ('/public/plugins/images/favicon.png') }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="/{{config('app.name')}}{{ ('/public/img/favicon.png') }}">
 	<title>Monitoring Pemanfaatan</title>
 
 	@yield('css')
@@ -33,15 +33,18 @@
 			<div class="navbar-header" style="background: #e1eedd;">
 				<div class="top-left-part" style="border-right-width: 0px;">
 					<!-- Logo -->
-					<a class="logo" href="/{{ config('app.name') }}" style="font-size: 20px; color: black; font-family: Helvetica, Arial, sans-serif">
+					{{-- <a class="logo" href="/{{ config('app.name') }}" style="font-size: 20px; color: black; font-family: Helvetica, Arial, sans-serif">
 							<!-- Logo icon image, you can use font-icon also --><b>
 
-							<!--This is dark logo icon--><img src="/{{config('app.name')}}{{ ('/public/ample/plugins/images/admin-logo.png') }}" alt="home" class="dark-logo" /><!--This is light logo icon--><img src="/{{config('app.name')}}{{ ('/public/ample/plugins/images/admin-logo-dark.png') }}" alt="home" class="light-logo" />
+							<!--This is dark logo icon--><img src="/{{config('app.name')}}{{ ('/public/ample/plugins/images/admin-logo.png') }}" alt="home" class="dark-logo" /><!--This is light logo icon--><img src="/{{config('app.name')}}{{ ('/public/img/bpad-black.png') }}" width="10%" alt="home" class="light-logo" />
 						 </b>
 						 <span style="text-transform: lowercase; color: #313131" class="hidden-xs">e<strong style="text-transform: capitalize;">Pemanfaatan</strong></span>
-							{{-- <!-- Logo text image you can use text also --><span class="hidden-xs">
-							<!--This is dark logo text--><img src="/{{config('app.name')}}{{ ('/public/ample/plugins/images/admin-text.png') }}" alt="home" class="dark-logo" /><!--This is light logo text--><img src="/{{config('app.name')}}{{ ('/public/ample/plugins/images/admin-text-dark.png') }}" alt="home" class="light-logo" />
-						 </span> --}}
+
+					</a> --}}
+					<a class="logo" href="/{{ config('app.name') }}">
+						<span class="hidden-sm hidden-md hidden-lg"><img width="50%" src="/epemanfaatan/public/img/bpad-black.png"></span>
+						<img width="20%" src="/epemanfaatan/public/img/bpad-black.png"><span style="text-transform: lowercase; color: #313131" class="hidden-xs">e<strong style="text-transform: capitalize;">Pemanfaatan</strong></span>
+						</span>
 					</a>
 				</div>
 				<!-- /Logo -->
