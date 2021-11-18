@@ -42,7 +42,7 @@
 			padding: 0px;
 		}
 		#issmap {
-			height: 500px; 
+			height: 600px; 
 			max-height: 1000px;
 			/*position: absolute;
 			top: 0px;
@@ -93,6 +93,13 @@
 	<!-- Peta JS -->
 
 	<script>
+  function showAlert() {
+    var myText = "This can be whatever text you like!";
+    alert (myText);
+  }
+  </script>
+
+	<script>
 		var datamap = $("#datamap").val();
 		datamap = JSON.parse(datamap)['hasil'];
 
@@ -127,7 +134,7 @@
 					popupAnchor: [1, -34],
 					shadowSize: [41, 41]
 				});
-				L.marker([value['lat'], value['lon']], {icon: thisicon}).addTo(mymap).bindPopup("ASET "+value['nabar']+'<br>'+value['alamat']);
+				L.marker([value['lat'], value['lon']], {icon: thisicon}).addTo(mymap).bindPopup("ASET "+value['nabar']+'<br>'+value['alamat']+'<br><br><button class="btn btn-info btn-block" onclick="showAlert()">Detail</button>');
 			}
 		});
 

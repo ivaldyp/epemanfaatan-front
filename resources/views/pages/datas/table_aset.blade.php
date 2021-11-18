@@ -100,22 +100,21 @@
 								<tr>
 									<th>No</th>
 									<th>Jenis Aset</th>
-									{{-- <th>Tanggal Oleh</th> --}}
 									<th>Alamat</th>
 									<th>Ukuran</th>
 									<th>Lokasi</th>
+									<th>Detail</th>
 								</tr>
 							</thead>
 							<tbody>
 								@if($datamap)
 									@foreach($datamap as $key => $data)
 									<tr>
-										<td>{{ $key+1 }}</td>
-										<td>{{ ucwords(strtolower($data->nabar)) }}</td>
-										{{-- <td>{{ date('d-M-Y', strtotime($data->tgloleh )) }}</td> --}}
-										<td>{{ $data->alamat }}</td>
-										<td>{{ $data->ukuran }} {{ $data->satuan }}</td>
-										<td>
+										<td style="vertical-align:middle;">{{ $key+1 }}</td>
+										<td style="vertical-align:middle;">{{ ucwords(strtolower($data->nabar)) }}</td>
+										<td style="vertical-align:middle;">{{ $data->alamat }}</td>
+										<td style="vertical-align:middle;">{{ $data->ukuran }} {{ $data->satuan }}</td>
+										<td style="vertical-align:middle;">
 											@if(is_numeric($data->lat) && is_numeric($data->lon))
 											<a href="/epemanfaatan/peta/cari" style="margin-right: 2px" onclick="window.open('/epemanfaatan/peta/cari?lat={{ $data->lat }}&lon={{ $data->lon }}&alamat={{ $data->alamat }}&nabar={{ $data->nabar }}&kobar={{ $data->kobar }}', 
 						                        'newwindow', 
@@ -128,11 +127,37 @@
 											</a>
 											@endif
 										</td>
+										<td><button class="btn btn-info btn-detail" data-toggle="modal" data-target="#modal-detail">Lihat</button></td>
 									</tr>
 									@endforeach
 								@endif
 							</tbody>
 						</table>
+					</div>
+				</div>
+			</div>
+			<div id="modal-detail" class="modal fade" role="dialog">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title"><b>Detail</b></h4>
+						</div>
+						<div class="modal-body">
+							<div class="loadpattern">
+								<svg class="circular" viewBox="25 25 50 50">
+									<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> 
+								</svg>
+							</div>
+							<div class="loadisi">
+								<h4 id="label_delete">Apakah anda ingin melakukan kegiatan ini?</h4>
+								<h3 id="label_delete">Apakah anda ingin melakukan kegiatan ini?</h3>
+								<h2 id="label_delete">Apakah anda ingin melakukan kegiatan ini?</h2>
+								<h3 id="label_delete">Apakah anda ingin melakukan kegiatan ini?</h3>
+								<h4 id="label_delete">Apakah anda ingin melakukan kegiatan ini?</h4>
+								<h1 id="label_delete">Apakah anda ingin melakukan kegiatan ini?</h1>
+								
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -168,6 +193,21 @@
 			});
 
 
+		});
+	</script>
+
+	<script>
+		$(function(){
+			$(".btn-detail").click(function(){
+				$(".loadisi").hide();
+				$(".loadpattern").show();
+				function show_popup(){
+					$(".loadpattern").hide();
+					$(".loadisi").show();
+				};
+				window.setTimeout(show_popup, 3000 );
+			}); 
+			 // 5 seconds
 		});
 	</script>
 	<!-- Style Switcher -->
