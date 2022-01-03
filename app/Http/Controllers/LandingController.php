@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Pem_carousel;
+
 class LandingController extends Controller
 {
 	public function index(Request $request)
@@ -19,9 +21,16 @@ class LandingController extends Controller
 		// dd($datastat);
 		// die();
 
+		$imgs = Pem_carousel::
+				where('sts', 1)
+				->where('appr', 1)
+				->orderBy('urut', 'asc')
+				->get();
+
 		return view('index')
 				->with('totalasd', $totalasd)
 				->with('datastat', $datastat[0])
+				->with('imgs', $imgs)
 				;
 	}
 }

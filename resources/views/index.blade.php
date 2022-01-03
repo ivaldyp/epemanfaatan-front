@@ -98,27 +98,32 @@
 					<div class="col-md-8">
 						<div class="white-box" style="padding: 0px;">
 							<div id="carousel-example-captions" data-ride="carousel" class="carousel slide">
+								{{-- @if(count($imgs) > 1)
                                 <ol class="carousel-indicators">
-                                    <li data-target="#carousel-example-captions" data-slide-to="0" class="active"></li>
-                                    <li data-target="#carousel-example-captions" data-slide-to="1"></li>
-                                </ol>
+									<li data-target="#carousel-0" data-slide-to="0" class="active"></li>
+									@foreach($imgs as $key => $img)
+                                    <li data-target="#carousel-{{ $key+1 }}" data-slide-to="{{ $key+1 }}" class=""></li>
+									@endforeach
+								</ol>
+								@endif --}}
+								
                                 <div role="listbox" class="carousel-inner">
-                                    <div class="item active"> <img src="/{{config('app.name')}}{{ ('/public/img/index/carousel-img1.jpeg') }}" alt="First slide image">
-                                        
+									<div class="item active"> 
+										<img src="/{{config('app.name')}}{{ ('/public/img/index/carousel-img1.jpeg') }}" alt="First slide image">
                                     </div>
-                                    <div class="item"> <img src="/{{config('app.name')}}{{ ('/public/img/index/carousel-img2.jpeg') }}" alt="Second slide image">
-                                        
-                                    </div>
+									@if(count($imgs) > 0)
+									@foreach($imgs as $key => $img)
+									<div class="item"> 
+										<img src="{{config('app.openfilepemanfaatancarousel')}}/{{ $img['image'] }}" alt="{{ $key+1 }} slide image">
+									</div>
+									@endforeach
+									@endif
                                 </div>
+								@if(count($imgs) > 0)
                                 <a href="#carousel-example-captions" role="button" data-slide="prev" class="left carousel-control"> <span aria-hidden="true" class="fa fa-angle-left"></span> <span class="sr-only">Previous</span> </a>
                                 <a href="#carousel-example-captions" role="button" data-slide="next" class="right carousel-control"> <span aria-hidden="true" class="fa fa-angle-right"></span> <span class="sr-only">Next</span> </a>
-                            </div>
-							{{-- <img src="/{{config('app.name')}}{{ ('/public/img/index/carousel-img1.jpeg') }}" alt="welcome"
-							style="
-								height: 100%;
-								width: 100%;
-								border-radius: 8px;
-							"> --}}
+								@endif
+							</div>
 						</div>
 					</div>
 					<div class="col-md-4">

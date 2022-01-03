@@ -54,6 +54,8 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
+    'openfilepemanfaatancarousel' => '/portal/public/publicimg/pemanfaatancarousel',
+
     'asset_url' => env('ASSET_URL', null),
 
     /*
