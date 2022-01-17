@@ -103,6 +103,7 @@
 									<th>Alamat</th>
 									<th>Ukuran</th>
 									<th>Lokasi</th>
+									<th style="text-align: center; justify-content: center; align-content: center;">Email</th>
 									<th>Detail</th>
 								</tr>
 							</thead>
@@ -127,6 +128,13 @@
 											</a>
 											@endif
 										</td>
+										<td style="vertical-align: middle; text-align: center; justify-content: center; align-content: center;">
+											<a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=bpad@jakarta.go.id&su=Pengajuan Kerjasama Aset&body=
+												Aset {{ ucwords(strtolower($data->nabar)) }} dengan alamat {{ $data->alamat }}												
+											">
+												<button class="btn btn-danger btn-email"><i class="fa fa-envelope"></i></button>
+											</a>
+										</td>
 										<td><button class="btn btn-info btn-detail" data-toggle="modal" data-target="#modal-detail">Lihat</button></td>
 									</tr>
 									@endforeach
@@ -140,7 +148,8 @@
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
-							<h4 class="modal-title"><b>Detail</b></h4>
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							<h4 class="modal-title" style="text-align: center;"><b>DETAIL</b></h4>
 						</div>
 						<div class="modal-body">
 							<div class="loadpattern">
@@ -149,13 +158,13 @@
 								</svg>
 							</div>
 							<div class="loadisi">
-								<h4 id="label_delete">Apakah anda ingin melakukan kegiatan ini?</h4>
+								<!-- <h4 id="label_delete">Apakah anda ingin melakukan kegiatan ini?</h4>
 								<h3 id="label_delete">Apakah anda ingin melakukan kegiatan ini?</h3>
 								<h2 id="label_delete">Apakah anda ingin melakukan kegiatan ini?</h2>
 								<h3 id="label_delete">Apakah anda ingin melakukan kegiatan ini?</h3>
 								<h4 id="label_delete">Apakah anda ingin melakukan kegiatan ini?</h4>
 								<h1 id="label_delete">Apakah anda ingin melakukan kegiatan ini?</h1>
-								
+								 -->
 							</div>
 						</div>
 					</div>
@@ -201,6 +210,20 @@
 			$(".btn-detail").click(function(){
 				$(".loadisi").hide();
 				$(".loadpattern").show();
+
+				$.ajax({ 
+					type: "GET", 
+					url: "/epemanfaatan/data/request/getdatasingle?lok="+ruangnow,
+					data: {kd_lokasi : varkd_lokasi, lantai : varlantai},
+					dataType: "JSON",
+					}).done(function( result ) { 
+						$.CalendarApp.init(result)
+					
+					// success: function(result){
+					
+					// }
+				});
+
 				function show_popup(){
 					$(".loadpattern").hide();
 					$(".loadisi").show();

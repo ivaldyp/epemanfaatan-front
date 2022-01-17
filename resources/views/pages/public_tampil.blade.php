@@ -173,7 +173,7 @@
 									<td>
 										<div class="col-md-12 hidden-xs hidden-sm" style="padding-bottom: 10px; font-weight: bold;">
 											<div class="col-md-4">Kegiatan</div>
-											<div class="col-md-2 col-md-offset-1">Tanggal</div>
+											<div class="col-md-2 col-md-offset-1">Tanggal Proses</div>
 										</div>
 										<?php $nomor = 1; ?>
 										@while(true)
