@@ -135,7 +135,7 @@
 												<button class="btn btn-danger btn-email"><i class="fa fa-envelope"></i></button>
 											</a>
 										</td>
-										<td><button class="btn btn-info btn-detail" data-toggle="modal" data-target="#modal-detail">Lihat</button></td>
+										<td style="vertical-align: middle;"><button class="btn btn-info btn-detail" data-toggle="modal" data-target="#modal-detail" data-ids="{{ $data->ids }}">Lihat</button></td>
 									</tr>
 									@endforeach
 								@endif
@@ -145,7 +145,7 @@
 				</div>
 			</div>
 			<div id="modal-detail" class="modal fade" role="dialog">
-				<div class="modal-dialog">
+				<div class="modal-dialog modal-lg modal-dialog-centered">
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -158,13 +158,39 @@
 								</svg>
 							</div>
 							<div class="loadisi">
-								<!-- <h4 id="label_delete">Apakah anda ingin melakukan kegiatan ini?</h4>
-								<h3 id="label_delete">Apakah anda ingin melakukan kegiatan ini?</h3>
-								<h2 id="label_delete">Apakah anda ingin melakukan kegiatan ini?</h2>
-								<h3 id="label_delete">Apakah anda ingin melakukan kegiatan ini?</h3>
-								<h4 id="label_delete">Apakah anda ingin melakukan kegiatan ini?</h4>
-								<h1 id="label_delete">Apakah anda ingin melakukan kegiatan ini?</h1>
-								 -->
+								<table>
+									<tbody style="font-size: 16px;">
+										<tr style="">
+											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Jenis</td>
+											<td id="detail-jenis" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+										</tr>
+										<tr style="">
+											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Alamat</td>
+											<td id="detail-alamat" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+										</tr>
+										<tr style="">
+											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Ukuran</td>
+											<td id="detail-ukuran" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+										</tr>
+										<tr style="">
+											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Lat & Lon</td>
+											<td id="detail-latlon" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+										</tr>
+										<tr style="">
+											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Tipe</td>
+											<td id="detail-tipe" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+										</tr>
+										<tr style="">
+											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Catatan</td>
+											<td id="detail-catatan" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+										</tr>
+										<tr>
+											<td colspan="2" style="text-align: center; vertical-align: middle; padding-top: 15px;" class="detail-isi" id="detail-iframe">
+												
+											</td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
 						</div>
 					</div>
@@ -210,23 +236,32 @@
 			$(".btn-detail").click(function(){
 				$(".loadisi").hide();
 				$(".loadpattern").show();
-
+				$(".detail-isi").empty();
+		
+				var ids = $(this).data('ids');
+				
 				$.ajax({ 
 					type: "GET", 
-					url: "/epemanfaatan/data/request/getdatasingle?lok="+ruangnow,
-					data: {kd_lokasi : varkd_lokasi, lantai : varlantai},
+					url: "/epemanfaatan/data/request/getdatasingle",
+					data: {ids : ids},
 					dataType: "JSON",
 					}).done(function( result ) { 
-						$.CalendarApp.init(result)
-					
-					// success: function(result){
-					
-					// }
+						$(".loadpattern").hide();
+						$(".loadisi").show();
+						$("#detail-jenis").text(result['nabar'].toLowerCase().replace(/\b[a-z]/g, function(letter) {
+    						return letter.toUpperCase();
+						}));
+						$("#detail-alamat").text(result['alamat']);
+						$("#detail-ukuran").text(result['ukuran'] + " " + result['satuan']);
+						$("#detail-latlon").text(result['lat'] + ', ' + result['lon']);
+						$("#detail-tipe").text(result['tipe_aset'] == "1" ? "Pemanfaatan Full" : "Pemanfaatan Sebagian");
+						$("#detail-catatan").text(result['cat_aset']);
+						$("#detail-iframe").append('<iframe width="700" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"  src="https://maps.google.com/maps?q='+result['lat']+','+result['lon']+'&hl=es;z=14&amp;output=embed"></iframe>');
+						// $("#detail-iframe").prop('src', 'https://maps.google.com/maps?q=10.305385,77.923029&hl=es;z=14&amp;output=embed');
 				});
 
 				function show_popup(){
-					$(".loadpattern").hide();
-					$(".loadisi").show();
+					
 				};
 				window.setTimeout(show_popup, 3000 );
 			}); 

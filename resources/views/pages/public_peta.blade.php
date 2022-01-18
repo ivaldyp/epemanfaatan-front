@@ -67,6 +67,53 @@
 					
 				</div>
 			</div>
+			<div id="modal-detail" class="modal fade" role="dialog">
+				<div class="modal-dialog modal-lg modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							<h4 class="modal-title" style="text-align: center;"><b>DETAIL</b></h4>
+						</div>
+						<div class="modal-body">
+							<div class="loadpattern">
+								<svg class="circular" viewBox="25 25 50 50">
+									<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> 
+								</svg>
+							</div>
+							<div class="loadisi">
+								<table>
+									<tbody style="font-size: 16px;">
+										<tr style="">
+											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Jenis</td>
+											<td id="detail-jenis" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+										</tr>
+										<tr style="">
+											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Alamat</td>
+											<td id="detail-alamat" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+										</tr>
+										<tr style="">
+											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Ukuran</td>
+											<td id="detail-ukuran" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+										</tr>
+										<tr style="">
+											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Lat & Lon</td>
+											<td id="detail-latlon" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+										</tr>
+										<tr style="">
+											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Tipe</td>
+											<td id="detail-tipe" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+										</tr>
+										<tr style="">
+											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Catatan</td>
+											<td id="detail-catatan" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -93,11 +140,31 @@
 	<!-- Peta JS -->
 
 	<script>
-  function showAlert() {
-    var myText = "This can be whatever text you like!";
-    alert (myText);
-  }
-  </script>
+		function showAlert(ids) {
+			$(".loadisi").hide();
+			$(".loadpattern").show();
+			$(".detail-isi").empty();
+			
+			$.ajax({ 
+				type: "GET", 
+				url: "/epemanfaatan/data/request/getdatasingle",
+				data: {ids : ids},
+				dataType: "JSON",
+				}).done(function( result ) { 
+					$(".loadpattern").hide();
+					$(".loadisi").show();
+					console.log(result);
+					$("#detail-jenis").text(result['nabar'].toLowerCase().replace(/\b[a-z]/g, function(letter) {
+						return letter.toUpperCase();
+					}));
+					$("#detail-alamat").text(result['alamat']);
+					$("#detail-ukuran").text(result['ukuran'] + " " + result['satuan']);
+					$("#detail-latlon").text(result['lat'] + ', ' + result['lon']);
+					$("#detail-tipe").text(result['tipe_aset'] == "1" ? "Pemanfaatan Full" : "Pemanfaatan Sebagian");
+					$("#detail-catatan").text(result['cat_aset']);
+			});
+		}
+	</script>
 
 	<script>
 		var datamap = $("#datamap").val();
@@ -134,7 +201,9 @@
 					popupAnchor: [1, -34],
 					shadowSize: [41, 41]
 				});
-				L.marker([value['lat'], value['lon']], {icon: thisicon}).addTo(mymap).bindPopup("ASET "+value['nabar']+'<br>'+value['alamat']+'<br><br><button class="btn btn-info btn-block" onclick="showAlert()">Detail</button>');
+
+				var ids = value['ids'];
+				L.marker([value['lat'], value['lon']], {icon: thisicon}).addTo(mymap).bindPopup("ASET "+value['nabar']+'<br>'+value['alamat']+'<br><br><button class="btn btn-info btn-block btn-detail" data-toggle="modal" data-target="#modal-detail" onclick="showAlert(\''+ids+'\')">Detail</button>');
 			}
 		});
 
@@ -166,5 +235,7 @@
 		// L.marker([-6.2088, 106.8456], {icon: greenIcon}).addTo(mymap).bindPopup("I am a green leaf.");
 
 	</script>
+
+	
 
 @endsection
