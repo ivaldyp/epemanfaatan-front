@@ -108,6 +108,7 @@
 								</tr>
 							</thead>
 							<tbody>
+                                @php $datamap = 0; @endphp
 								@if($datamap)
 									@foreach($datamap as $key => $data)
 									<tr>
