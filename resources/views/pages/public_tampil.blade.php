@@ -3,18 +3,18 @@
 @section('css')
 
 	<!-- Bootstrap Core CSS -->
-	<link href="/{{config('app.name')}}{{ ('/public/ample/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+	<link href="/{{config('app.name')}}{{ ('/ample/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
 	<!-- Footable CSS -->
-	<link href="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/footable/css/footable.core.css') }}" rel="stylesheet">
-	<link href="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/bootstrap-select/bootstrap-select.min.css') }}" rel="stylesheet" />
+	<link href="/{{config('app.name')}}{{ ('/ample/plugins/bower_components/footable/css/footable.core.css') }}" rel="stylesheet">
+	<link href="/{{config('app.name')}}{{ ('/ample/plugins/bower_components/bootstrap-select/bootstrap-select.min.css') }}" rel="stylesheet" />
 	<!-- Menu CSS -->
-	<link href="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css') }}" rel="stylesheet">
+	<link href="/{{config('app.name')}}{{ ('/ample/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css') }}" rel="stylesheet">
 	<!-- animation CSS -->
-	<link href="/{{config('app.name')}}{{ ('/public/ample/css/animate.css') }}" rel="stylesheet">
+	<link href="/{{config('app.name')}}{{ ('/ample/css/animate.css') }}" rel="stylesheet">
 	<!-- Custom CSS -->
-	<link href="/{{config('app.name')}}{{ ('/public/ample/css/style.css') }}" rel="stylesheet">
+	<link href="/{{config('app.name')}}{{ ('/ample/css/style.css') }}" rel="stylesheet">
 	<!-- color CSS -->
-	<link href="/{{config('app.name')}}{{ ('/public/ample/css/colors/megna-dark.css') }}" id="theme" rel="stylesheet">
+	<link href="/{{config('app.name')}}{{ ('/ample/css/colors/megna-dark.css') }}" id="theme" rel="stylesheet">
 
 	<style type="text/css">
 		body {
@@ -271,23 +271,23 @@
 @section('js')
 
 	<!-- jQuery -->
-	<script src="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/jquery/dist/jquery.min.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/plugins/bower_components/jquery/dist/jquery.min.js') }}"></script>
 	<!-- Bootstrap Core JavaScript -->
-	<script src="/{{config('app.name')}}{{ ('/public/ample/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 	<!-- Menu Plugin JavaScript -->
-	<script src="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js') }}"></script>
 	<!-- slimscroll JavaScript -->
-	<script src="/{{config('app.name')}}{{ ('/public/ample/js/jquery.slimscroll.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/js/jquery.slimscroll.js') }}"></script>
 	<!-- Wave Effects -->
-	<script src="/{{config('app.name')}}{{ ('/public/ample/js/waves.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/js/waves.js') }}"></script>
 	<!-- Custom Theme JavaScript -->
-	<script src="/{{config('app.name')}}{{ ('/public/ample/js/custom.min.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/js/custom.min.js') }}"></script>
 	<!-- Footable -->
-	<script src="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/footable/js/footable.all.min.js') }}"></script>
-	<script src="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/bootstrap-select/bootstrap-select.min.js') }}" type="text/javascript"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/plugins/bower_components/footable/js/footable.all.min.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/plugins/bower_components/bootstrap-select/bootstrap-select.min.js') }}" type="text/javascript"></script>
 	<!--FooTable init-->
-	<script src="/{{config('app.name')}}{{ ('/public/ample/js/footable-init.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/js/footable-init.js') }}"></script>
 	<!-- Style Switcher -->
-	<script src="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/styleswitcher/jQuery.style.switcher.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/plugins/bower_components/styleswitcher/jQuery.style.switcher.js') }}"></script>
 
 @endsection

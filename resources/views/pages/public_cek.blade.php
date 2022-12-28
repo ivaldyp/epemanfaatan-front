@@ -3,17 +3,17 @@
 @section('css')
 
 	<!-- Bootstrap Core CSS -->
-	<link href="/{{config('app.name')}}{{ ('/public/ample/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+	<link href="/{{config('app.name')}}{{ ('/ample/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
 	<!-- Menu CSS -->
-	<link href="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css') }}" rel="stylesheet">
+	<link href="/{{config('app.name')}}{{ ('/ample/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css') }}" rel="stylesheet">
 	<!-- toast CSS -->
-	<link href="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/toast-master/css/jquery.toast.css') }}" rel="stylesheet">
+	<link href="/{{config('app.name')}}{{ ('/ample/plugins/bower_components/toast-master/css/jquery.toast.css') }}" rel="stylesheet">
 	<!-- animation CSS -->
-	<link href="/{{config('app.name')}}{{ ('/public/ample/css/animate.css') }}" rel="stylesheet">
+	<link href="/{{config('app.name')}}{{ ('/ample/css/animate.css') }}" rel="stylesheet">
 	<!-- Custom CSS -->
-	<link href="/{{config('app.name')}}{{ ('/public/ample/css/style.css') }}" rel="stylesheet">
+	<link href="/{{config('app.name')}}{{ ('/ample/css/style.css') }}" rel="stylesheet">
 	<!-- color CSS -->
-	<link href="/{{config('app.name')}}{{ ('/public/ample/css/colors/megna-dark.css') }}" id="theme" rel="stylesheet">
+	<link href="/{{config('app.name')}}{{ ('/ample/css/colors/megna-dark.css') }}" id="theme" rel="stylesheet">
 
 	<style type="text/css">
 		body {
@@ -119,19 +119,19 @@
 @section('js')
 
 	<!-- jQuery -->
-	<script src="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/jquery/dist/jquery.min.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/plugins/bower_components/jquery/dist/jquery.min.js') }}"></script>
 	<!-- Bootstrap Core JavaScript -->
-	<script src="/{{config('app.name')}}{{ ('/public/ample/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 	<!-- Menu Plugin JavaScript -->
-	<script src="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js') }}"></script>
 	<!-- slimscroll JavaScript -->
-	<script src="/{{config('app.name')}}{{ ('/public/ample/js/jquery.slimscroll.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/js/jquery.slimscroll.js') }}"></script>
 	<!-- Wave Effects -->
-	<script src="/{{config('app.name')}}{{ ('/public/ample/js/waves.js') }}"></script>
-	<script src="/{{config('app.name')}}{{ ('/public/ample/js/mask.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/js/waves.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/js/mask.js') }}"></script>
 	<!-- Toast js -->
-	<script src="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/toast-master/js/jquery.toast.js') }}"></script>
-	<script src="/{{config('app.name')}}{{ ('/public/ample/js/toastr.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/plugins/bower_components/toast-master/js/jquery.toast.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/js/toastr.js') }}"></script>
 	<script type="text/javascript">
 		$("#input-kode").mouseup(function () {
 		    this.setSelectionRange(0,0);    
@@ -178,9 +178,9 @@
 		});
 	</script>
 	<!-- Custom Theme JavaScript -->
-	<script src="/{{config('app.name')}}{{ ('/public/ample/js/custom.min.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/js/custom.min.js') }}"></script>
 	<!-- Style Switcher -->
-	<script src="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/styleswitcher/jQuery.style.switcher.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/plugins/bower_components/styleswitcher/jQuery.style.switcher.js') }}"></script>
 
 
 @endsection

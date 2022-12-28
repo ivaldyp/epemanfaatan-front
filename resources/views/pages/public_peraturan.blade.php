@@ -3,15 +3,15 @@
 @section('css')
 
 	<!-- Bootstrap Core CSS -->
-	<link href="/{{config('app.name')}}{{ ('/public/ample/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+	<link href="/{{config('app.name')}}{{ ('/ample/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
 	<!-- Menu CSS -->
-	<link href="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css') }}" rel="stylesheet">
+	<link href="/{{config('app.name')}}{{ ('/ample/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css') }}" rel="stylesheet">
 	<!-- animation CSS -->
-	<link href="/{{config('app.name')}}{{ ('/public/ample/css/animate.css') }}" rel="stylesheet">
+	<link href="/{{config('app.name')}}{{ ('/ample/css/animate.css') }}" rel="stylesheet">
 	<!-- Custom CSS -->
-	<link href="/{{config('app.name')}}{{ ('/public/ample/css/style.css') }}" rel="stylesheet">
+	<link href="/{{config('app.name')}}{{ ('/ample/css/style.css') }}" rel="stylesheet">
 	<!-- color CSS -->
-	<link href="/{{config('app.name')}}{{ ('/public/ample/css/colors/megna-dark.css') }}" id="theme" rel="stylesheet">
+	<link href="/{{config('app.name')}}{{ ('/ample/css/colors/megna-dark.css') }}" id="theme" rel="stylesheet">
 
 	<style type="text/css">
 		body {
@@ -70,15 +70,15 @@
                         </ul>
                         <div class="tab-content" style="vertical-align: middle;">
                             <div id="home3" class="tab-pane active">
-	                            <img src="/{{config('app.name')}}{{ ('/public/img/prosedur/1.png') }}" width='100%' alt='1. Cari'/>
+	                            <img src="/{{config('app.name')}}{{ ('/img/prosedur/1.png') }}" width='100%' alt='1. Cari'/>
                                 <div class="clearfix"></div>
                             </div>
                             <div id="profile3" class="tab-pane">
-                                <img src="/{{config('app.name')}}{{ ('/public/img/prosedur/2.png') }}" width='100%' alt='2. Ajukan'/>
+                                <img src="/{{config('app.name')}}{{ ('/img/prosedur/2.png') }}" width='100%' alt='2. Ajukan'/>
                                 <div class="clearfix"></div>
                             </div>
                             <div id="messages3" class="tab-pane">
-                                <img src="/{{config('app.name')}}{{ ('/public/img/prosedur/3.png') }}" width='100%' alt='3. Pantau'/>
+                                <img src="/{{config('app.name')}}{{ ('/img/prosedur/3.png') }}" width='100%' alt='3. Pantau'/>
                                 <div class="clearfix"></div>
                             </div>
                         </div>
@@ -104,20 +104,20 @@
 @section('js')
 
 	<!-- jQuery -->
-	<script src="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/jquery/dist/jquery.min.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/plugins/bower_components/jquery/dist/jquery.min.js') }}"></script>
 	<!-- Bootstrap Core JavaScript -->
-	<script src="/{{config('app.name')}}{{ ('/public/ample/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 	<!-- Menu Plugin JavaScript -->
-	<script src="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js') }}"></script>
 	<!-- slimscroll JavaScript -->
-	<script src="/{{config('app.name')}}{{ ('/public/ample/js/jquery.slimscroll.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/js/jquery.slimscroll.js') }}"></script>
 	<!-- Wave Effects -->
-	<script src="/{{config('app.name')}}{{ ('/public/ample/js/waves.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/js/waves.js') }}"></script>
 	<!-- Custom Theme JavaScript -->
 	<!-- Data table -->
-	<script src="/{{config('app.name')}}{{ ('/public/ample/js/custom.min.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/js/custom.min.js') }}"></script>
 	<!-- Style Switcher -->
-	<script src="/{{config('app.name')}}{{ ('/public/ample/plugins/bower_components/styleswitcher/jQuery.style.switcher.js') }}"></script>
+	<script src="/{{config('app.name')}}{{ ('/ample/plugins/bower_components/styleswitcher/jQuery.style.switcher.js') }}"></script>
 
 
 @endsection
