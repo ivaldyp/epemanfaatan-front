@@ -176,7 +176,6 @@
 		}).addTo(mymap);
 		
 		var col = "";
-        datamap = 0;
 		$.each( datamap, function( key, value ) {
 
 			if ($.isNumeric(value['lat']) && $.isNumeric(value['lon'])) {
