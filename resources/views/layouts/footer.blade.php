@@ -63,7 +63,7 @@
 					<h5 style="color: #183a1d"><i class="fa fa-copyright"></i> Copyright by BPAD PROVINSI DKI JAKARTA </h5>
 				</div>
 				<div class="col-md-6">
-					<h5 style="color: #183a1d" class="pull-right"> Powered By Sub Bidang Data Informasi</h5>
+					<h5 style="color: #183a1d" class="pull-right"> Powered By Pusat Data dan Informasi Aset</h5>
 				</div>
 			</div>
 		</div>

@@ -67,13 +67,10 @@
 	                        <h4 class="panel-title"> <a class="font-bold collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" > Aset jenis apa saja yang ditampilkan pada sistem E-Pemanfaatan? </a> </h4> </div>
 	                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 	                        <div class="panel-body"> 
-	                        	Ada 5 jenis aset yang ditampilkan di sistem ini yaitu : <br>
+	                        	Ada 2 jenis aset yang ditampilkan di sistem ini yaitu : <br>
 	                        	<ul>
 	                        		<li>KIB A: Aset Tanah</li>
-	                        		<li>KIB B: Peralatan dan Mesin</li>
 	                        		<li>KIB C: Gedung dan Bangunan</li>
-	                        		<li>KIB D: Jalan, Irigasi dan Jaringan</li>
-	                        		<li>KIB E: Aset Lainnya</li>
 	                        	</ul>
 	                        </div>
 	                    </div>

@@ -46,7 +46,7 @@
 
 @section('content')
 
-	<div class="container" style="margin-top: 90px">
+	<div class="container-fluid" style="margin-top: 90px">
 
 		<div class="row">
 			<div class="col-md-12">
