@@ -128,9 +128,30 @@
 											</a>
 											@endif
 										</td>
+                                        <?php
+                                            $headmail = "Permohonan Pemanfaatan Barang Milik Daerah oleh [PIHAK KETIGA]";
+                                            $bodymail = 
+                                                "Yth. Gubernur Provinsi DKI Jakarta %0A".
+                                                "c.q. Kepala Badan Pengelolaan Aset Daerah %0A".
+                                                "Provinsi DKI Jakarta %0A" .
+                                                "di%0A".
+                                                "Jakarta %0A %0A" .
+                                                
+                                                "Bersama ini kami dari [PIHAK KETIGA] bermaksud mengajukan permohonan pemanfaatan lahan milik Pemerintah Provinsi DKI Jakarta %0A%0A" .
+                                                "Alamat Kantor:%0A" .
+                                                "No Telp / PIC:%0A" . 
+                                                "Lokasi yang dimohonkan: " . $data->alamat . "%0A" .
+                                                "Rencana peruntukkan:%0A" . 
+                                                "Tipe Luasan: [FULL / SEBAGIAN]%0A" . 
+                                                "Luas yang akan dimanfaatkan:%0A%0A".
+                                                
+                                                "Demikian surat permohonan pinjam pakai ini kami sampaikan atas perhatian dan kerjasamanya, diucapkan terimakasih. %0A%0A" .
+                                                
+                                                "[PIHAK KETIGA]"
+                                                ;
+                                        ?>
 										<td style="vertical-align: middle; text-align: center; justify-content: center; align-content: center;">
-											<a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=bpad@jakarta.go.id&su=Pengajuan Kerjasama Aset&body=
-												Aset {{ ucwords(strtolower($data->nabar)) }} dengan alamat {{ $data->alamat }}												
+											<a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=pemanfaatan.bpad@gmail.com&su={{ $headmail }}&body={{ $bodymail }}												
 											">
 												<button class="btn btn-danger btn-email"><i class="fa fa-envelope"></i></button>
 											</a>
