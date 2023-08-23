@@ -181,27 +181,43 @@
 							<div class="loadisi">
 								<table>
 									<tbody style="font-size: 16px;">
-										<tr style="">
+										<tr>
 											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Jenis</td>
 											<td id="detail-jenis" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
 										</tr>
-										<tr style="">
+										<tr>
 											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Alamat</td>
 											<td id="detail-alamat" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
 										</tr>
-										<tr style="">
+										<tr>
 											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Ukuran</td>
 											<td id="detail-ukuran" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
 										</tr>
-										<tr style="">
+										<tr>
 											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Lat & Lon</td>
 											<td id="detail-latlon" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
 										</tr>
-										<tr style="">
+										<tr>
 											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Tipe</td>
 											<td id="detail-tipe" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
 										</tr>
-										<tr style="">
+										<tr>
+											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Nilai Estimasi</td>
+											<td id="detail-nilai-est" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+										</tr>
+										<tr>
+											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Peruntukan</td>
+											<td id="detail-peruntukkan" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+										</tr>
+										<tr>
+											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">KDB</td>
+											<td id="detail-kdb" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+										</tr>
+										<tr>
+											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">KLB</td>
+											<td id="detail-klb" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+										</tr>
+										<tr>
 											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Catatan</td>
 											<td id="detail-catatan" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
 										</tr>
@@ -253,6 +269,19 @@
 	</script>
 
 	<script>
+        function addCommas(nStr)
+        {
+            nStr += '';
+            x = nStr.split('.');
+            x1 = x[0];
+            x2 = x.length > 1 ? '.' + x[1] : '';
+            var rgx = /(\d+)(\d{3})/;
+            while (rgx.test(x1)) {
+                x1 = x1.replace(rgx, '$1' + ',' + '$2');
+            }
+            return x1 + x2;
+        }
+        
 		$(function(){
 			$(".btn-detail").click(function(){
 				$(".loadisi").hide();
@@ -276,6 +305,10 @@
 						$("#detail-ukuran").text(result['ukuran'] + " " + result['satuan']);
 						$("#detail-latlon").text(result['lat'] + ', ' + result['lon']);
 						$("#detail-tipe").text(result['tipe_aset'] == "1" ? "Pemanfaatan Full" : "Pemanfaatan Sebagian");
+						$("#detail-nilai-est").text("Rp " + addCommas(result['nilai_estimasi']));
+						$("#detail-peruntukkan").text(result['nm_peruntukan']);
+						$("#detail-kdb").text("Alternatif 1: " + (result['kdb1']=="" ? "-" : result['kdb1']) + ", Alternatif 2: " + (result['kdb2']=="" ? "-" : result['kdb2']));
+						$("#detail-klb").text("Alternatif 1: " + (result['klb1']=="" ? "-" : result['klb1']) + ", Alternatif 2: " + (result['klb2']=="" ? "-" : result['klb2']));
 						$("#detail-catatan").text(result['cat_aset']);
 						$("#detail-iframe").append('<iframe width="700" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"  src="https://maps.google.com/maps?q='+result['lat']+','+result['lon']+'&hl=es;z=14&amp;output=embed"></iframe>');
 						// $("#detail-iframe").prop('src', 'https://maps.google.com/maps?q=10.305385,77.923029&hl=es;z=14&amp;output=embed');
