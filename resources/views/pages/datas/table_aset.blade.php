@@ -103,7 +103,7 @@
 									<th>Alamat</th>
 									<th>Ukuran</th>
 									<th>Lokasi</th>
-									<th style="text-align: center; justify-content: center; align-content: center;">Email</th>
+									<th>Email</th>
 									<th>Detail</th>
 								</tr>
 							</thead>
@@ -150,7 +150,7 @@
                                                 "[PIHAK KETIGA]"
                                                 ;
                                         ?>
-										<td style="vertical-align: middle; text-align: center; justify-content: center; align-content: center;">
+										<td style="vertical-align: middle;">
 											<a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=pemanfaatan.bpad@gmail.com&su={{ $headmail }}&body={{ $bodymail }}												
 											">
 												<button class="btn btn-danger btn-email"><i class="fa fa-envelope"></i></button>
