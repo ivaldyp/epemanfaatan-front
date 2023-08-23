@@ -137,15 +137,15 @@
                                                 "di%0A".
                                                 "Jakarta %0A %0A" .
                                                 
-                                                "Bersama ini kami dari [PIHAK KETIGA] bermaksud mengajukan permohonan pemanfaatan lahan milik Pemerintah Provinsi DKI Jakarta %0A%0A" .
-                                                "Alamat Kantor:%0A" .
-                                                "No Telp / PIC:%0A" . 
-                                                "Lokasi yang dimohonkan: " . $data->alamat . "%0A" .
-                                                "Rencana peruntukkan:%0A" . 
-                                                "Tipe Luasan: [FULL / SEBAGIAN]%0A" . 
-                                                "Luas yang akan dimanfaatkan:%0A%0A".
+                                                "        Bersama ini kami dari [PIHAK KETIGA] bermaksud mengajukan permohonan pemanfaatan lahan milik Pemerintah Provinsi DKI Jakarta %0A%0A" .
+                                                "        Alamat Kantor:%0A" .
+                                                "        No Telp / PIC:%0A" . 
+                                                "        Lokasi yang dimohonkan: " . $data->alamat . "%0A" .
+                                                "        Rencana peruntukkan:%0A" . 
+                                                "        Tipe Luasan: [FULL / SEBAGIAN]%0A" . 
+                                                "        Luas yang akan dimanfaatkan:%0A%0A".
                                                 
-                                                "Demikian surat permohonan pinjam pakai ini kami sampaikan atas perhatian dan kerjasamanya, diucapkan terimakasih. %0A%0A" .
+                                                "        Demikian surat permohonan pinjam pakai ini kami sampaikan atas perhatian dan kerjasamanya, diucapkan terimakasih. %0A%0A" .
                                                 
                                                 "[PIHAK KETIGA]"
                                                 ;
