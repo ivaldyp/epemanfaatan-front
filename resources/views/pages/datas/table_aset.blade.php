@@ -145,7 +145,7 @@
                                                 "        Tipe Luasan: [FULL / SEBAGIAN]%0A" . 
                                                 "        Luas yang akan dimanfaatkan:%0A%0A".
                                                 
-                                                "        Demikian surat permohonan pinjam pakai ini kami sampaikan atas perhatian dan kerjasamanya, diucapkan terimakasih. %0A%0A" .
+                                                "        Demikian surat permohonan pemanfaatan ini kami sampaikan atas perhatian dan kerjasamanya, diucapkan terimakasih. %0A%0A" .
                                                 
                                                 "[PIHAK KETIGA]"
                                                 ;
@@ -182,44 +182,44 @@
 								<table>
 									<tbody style="font-size: 16px;">
 										<tr>
-											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Jenis</td>
-											<td id="detail-jenis" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+											<td class="col-lg-5" style="vertical-align: top; width: 200px; font-weight: bold;">Jenis</td>
+											<td id="detail-jenis" style="vertical-align: top;" class="detail-isi col-lg-7"></td>
 										</tr>
 										<tr>
-											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Alamat</td>
-											<td id="detail-alamat" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+											<td class="col-lg-5" style="vertical-align: top; width: 200px; font-weight: bold;">Alamat</td>
+											<td id="detail-alamat" style="vertical-align: top;" class="detail-isi col-lg-7"></td>
 										</tr>
 										<tr>
-											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Ukuran</td>
-											<td id="detail-ukuran" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+											<td class="col-lg-5" style="vertical-align: top; width: 200px; font-weight: bold;">Ukuran</td>
+											<td id="detail-ukuran" style="vertical-align: top;" class="detail-isi col-lg-7"></td>
 										</tr>
 										<tr>
-											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Lat & Lon</td>
-											<td id="detail-latlon" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+											<td class="col-lg-5" style="vertical-align: top; width: 200px; font-weight: bold;">Lat & Lon</td>
+											<td id="detail-latlon" style="vertical-align: top;" class="detail-isi col-lg-7"></td>
 										</tr>
 										<tr>
-											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Tipe</td>
-											<td id="detail-tipe" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+											<td class="col-lg-5" style="vertical-align: top; width: 200px; font-weight: bold;">Tipe</td>
+											<td id="detail-tipe" style="vertical-align: top;" class="detail-isi col-lg-7"></td>
 										</tr>
 										<tr>
-											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Nilai Estimasi</td>
-											<td id="detail-nilai-est" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+											<td class="col-lg-5" style="vertical-align: top; width: 200px; font-weight: bold;">Nilai Estimasi Sewa Pertahun</td>
+											<td id="detail-nilai-est" style="vertical-align: top;" class="detail-isi col-lg-7"></td>
 										</tr>
 										<tr>
-											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Peruntukan</td>
-											<td id="detail-peruntukkan" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+											<td class="col-lg-5" style="vertical-align: top; width: 200px; font-weight: bold;">Peruntukan</td>
+											<td id="detail-peruntukkan" style="vertical-align: top;" class="detail-isi col-lg-7"></td>
 										</tr>
 										<tr>
-											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">KDB</td>
-											<td id="detail-kdb" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+											<td class="col-lg-5" style="vertical-align: top; width: 200px; font-weight: bold;">KDB</td>
+											<td id="detail-kdb" style="vertical-align: top;" class="detail-isi col-lg-7"></td>
 										</tr>
 										<tr>
-											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">KLB</td>
-											<td id="detail-klb" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+											<td class="col-lg-5" style="vertical-align: top; width: 200px; font-weight: bold;">KLB</td>
+											<td id="detail-klb" style="vertical-align: top;" class="detail-isi col-lg-7"></td>
 										</tr>
 										<tr>
-											<td class="col-lg-4" style="vertical-align: top; width: 200px; font-weight: bold;">Catatan</td>
-											<td id="detail-catatan" style="vertical-align: top;" class="detail-isi col-lg-8"></td>
+											<td class="col-lg-5" style="vertical-align: top; width: 200px; font-weight: bold;">Catatan</td>
+											<td id="detail-catatan" style="vertical-align: top;" class="detail-isi col-lg-7"></td>
 										</tr>
 										<tr>
 											<td colspan="2" style="text-align: center; vertical-align: middle; padding-top: 15px;" class="detail-isi" id="detail-iframe">
