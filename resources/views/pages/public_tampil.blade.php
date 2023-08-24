@@ -112,8 +112,7 @@
 				<!-- Tab panes -->
 				<div class="tab-content" style="overflow-x: auto;">
 					<div role="tabpanel" class="tab-pane fade active in" id="home1">
-                        @php $amboy=7; @endphp
-						@if (!(isset($dataprogress[0]->nomor)) || $amboy == 7) 
+						@if (!(isset($dataprogress[0]->nomor))) 
 						<div class="col-md-12">
 							<h2>Tidak ada data</h2>
 						</div>
@@ -213,8 +212,7 @@
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="profile1">
 						<div class="col-md-12">
-                            @php $amboy=7; @endphp
-							@if(!(isset($datahistory[0]->nm_rekanan)) || $amboy == 7)
+							@if(!(isset($datahistory[0]->nm_rekanan)))
 							<h2>Tidak ada data</h2>
 							@else
 							<div class="table-responsive">
