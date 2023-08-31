@@ -236,9 +236,6 @@
     <div id="modal-detail" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span style="font-size: 20px;">x</span></button>
-                </div>
                 <div class="modal-body">
                     <img src="/{{config('app.name')}}{{ ('/img/prosedur/prosedur-permohonan.jpeg') }}" width="100%">
                 </div>
