@@ -154,14 +154,20 @@
 														<div class="col-md-2">Ukuran</div>
 														<div class="col-md-2">Tanggal Oleh</div>
 													</div>
-													@foreach($dataprogress[$i]->aset as $key => $aset)
-													<div class="col-md-12" style="margin-bottom: 10px">
-														<div class="col-md-1">{{ $key+1 }}</div>
-														<div class="col-md-5">{{ $aset->alamat }}</div>
-														<div class="col-md-2">{{ $aset->ukuran }} {{ $aset->satuan }}</div>
-														<div class="col-md-2">{{ date("d-M-Y", strtotime($aset->tgloleh)) }}</div>
-													</div>
-													@endforeach
+                                                    @if($dataprogress[$i]->aset == "")
+                                                    <div class="col-md-12" style="margin-bottom: 10px">
+                                                        <div class="col-md-12">TIDAK ADA DATA</div>
+                                                    </div>
+                                                    @else
+                                                        @foreach($dataprogress[$i]->aset as $key => $aset)
+                                                        <div class="col-md-12" style="margin-bottom: 10px">
+                                                            <div class="col-md-1">{{ $key+1 }}</div>
+                                                            <div class="col-md-5">{{ $aset->alamat }}</div>
+                                                            <div class="col-md-2">{{ $aset->ukuran }} {{ $aset->satuan }}</div>
+                                                            <div class="col-md-2">{{ date("d-M-Y", strtotime($aset->tgloleh)) }}</div>
+                                                        </div>
+                                                        @endforeach
+                                                    @endif
 													<div class="clearfix"></div>
 												</div>
 												<div class="modal-footer">
