@@ -172,8 +172,8 @@
 							<div class="col-md-6" style="height: 100px;">
 								<div class="white-box lainnya1">
 									<p class="" style="font-weight: bold; color: #fefbe9">DALAM PROSES</p>
-									{{-- <h1 style="color: #fefbe9" >{{ $datastat->dalam_proses }}</h1> --}}
-                                    <h1 style="color: #fefbe9" >0</h1>
+									<h1 style="color: #fefbe9" >{{ $datastat->dalam_proses }}</h1>
+                                    {{-- <h1 style="color: #fefbe9" >0</h1> --}}
 								</div>
 							</div>
 						</div>
