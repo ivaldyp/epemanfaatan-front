@@ -36,14 +36,14 @@
 					{{-- <a class="logo" href="/{{ config('app.name') }}" style="font-size: 20px; color: black; font-family: Helvetica, Arial, sans-serif">
 							<!-- Logo icon image, you can use font-icon also --><b>
 
-							<!--This is dark logo icon--><img src="/{{config('app.name')}}{{ ('/ample/plugins/images/admin-logo.png') }}" alt="home" class="dark-logo" /><!--This is light logo icon--><img src="/{{config('app.name')}}{{ ('/img/bpad-black.png') }}" width="10%" alt="home" class="light-logo" />
+							<!--This is dark logo icon--><img src="/{{config('app.name')}}{{ ('/ample/plugins/images/admin-logo.png') }}" alt="home" class="dark-logo" /><!--This is light logo icon--><img src="/{{config('app.name')}}{{ ('/img/bpad-black.png32') }}" width="10%" alt="home" class="light-logo" />
 						 </b>
 						 <span style="text-transform: lowercase; color: #313131" class="hidden-xs">e<strong style="text-transform: capitalize;">Pemanfaatan</strong></span>
 
 					</a> --}}
 					<a class="logo" href="/{{ config('app.name') }}">
-						<span class="hidden-sm hidden-md hidden-lg"><img width="50%" src="/{{config('app.name')}}/img/bpad-black.png"></span>
-						<img width="20%" src="/{{config('app.name')}}/img/bpad-black.png"><span style="text-transform: lowercase; color: #313131" class="hidden-xs">e<strong style="text-transform: capitalize;">Pemanfaatan</strong></span>
+						<span class="hidden-sm hidden-md hidden-lg"><img width="50%" src="/{{config('app.name')}}/img/bpad-black.png32"></span>
+						<img width="20%" src="/{{config('app.name')}}/img/bpad-black.png32"><span style="text-transform: lowercase; color: #313131" class="hidden-xs">e<strong style="text-transform: capitalize;">Pemanfaatan</strong></span>
 						</span>
 					</a>
 				</div>
