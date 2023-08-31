@@ -137,7 +137,7 @@
 									<td>{{ $dataprogress[$i]->noref }}</td>
 									<td>{{ $dataprogress[$i]->no_surat ? $dataprogress[$i]->no_surat : "-"}}</td>
 									<td>
-										{{ $dataprogress[$i]->tgl_surat ? date("d-M-Y", strtotime($dataprogress[$i]->tgl_surat)) : "-"}}
+										{{ $dataprogress[$i]->tgl_surat }}
 									</td>
 									<td>{{ $dataprogress[$i]->ringkasan }}</td>
 									<td><button class="btn btn-info" style="background-color: #f6c453; border: #f6c453" data-toggle="modal" data-target="#modal-aset-{{ $i }}">Lihat Aset</button></td>
