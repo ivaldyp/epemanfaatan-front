@@ -233,6 +233,19 @@
 		</div>
 	</div>
 
+    <div id="modal-detail" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span style="font-size: 20px;">x</span></button>
+                </div>
+                <div class="modal-body">
+                    <img src="/{{config('app.name')}}{{ ('/img/prosedur/prosedur-permohonan.jpeg') }}" width="100%">
+                </div>
+            </div>
+        </div>
+    </div>
+
 @endsection('content')
 
 <!-- ////////////////// -->
@@ -257,5 +270,9 @@
 	<!-- Style Switcher -->
 	<script src="/{{config('app.name')}}{{ ('/ample/plugins/bower_components/styleswitcher/jQuery.style.switcher.js') }}"></script>
 
-
+    <script type="text/javascript">
+        $(window).on('load', function() {
+            $('#modal-detail').modal('show');
+        });
+    </script>
 @endsection
