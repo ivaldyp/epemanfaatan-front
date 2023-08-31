@@ -132,14 +132,12 @@
 								<div class="white-box lainnya1">
 									<p class="" style="font-weight: bold; color: #fefbe9">SEWA</p>
 									<h1 style="color: #fefbe9" >{{ $datastat->SEWA }}</h1>
-                                    
 								</div>
 							</div>
 							<div class="col-md-6" style="height: 100px;">
 								<div class="white-box lainnya1">
 									<p class="" style="font-weight: bold; color: #fefbe9">PINJAM PAKAI</p>
 									<h1 style="color: #fefbe9" >{{ $datastat->PP }}</h1>
-                                    
 								</div>
 							</div>
 						</div>
@@ -149,14 +147,12 @@
 								<div class="white-box lainnya1">
 									<p class="" style="font-weight: bold; color: #fefbe9">BGS</p>
 									<h1 style="color: #fefbe9" >{{ $datastat->BGS }}</h1>
-                                    
 								</div>
 							</div>
 							<div class="col-md-6" style="height: 100px;">
 								<div class="white-box lainnya1">
 									<p class="" style="font-weight: bold; color: #fefbe9">BSG</p>
 									<h1 style="color: #fefbe9" >{{ $datastat->BSG }}</h1>
-                                    
 								</div>
 							</div>
 						</div>
@@ -166,14 +162,13 @@
 								<div class="white-box lainnya1">
 									<p class="" style="font-weight: bold; color: #fefbe9">PKS</p>
 									<h1 style="color: #fefbe9" >{{ $datastat->total_pks }}</h1>
-                                    
 								</div>
 							</div>
 							<div class="col-md-6" style="height: 100px;">
 								<div class="white-box lainnya1">
 									<p class="" style="font-weight: bold; color: #fefbe9">DALAM PROSES</p>
 									<h1 style="color: #fefbe9" >{{ $datastat->dalam_proses }}</h1>
-								</div
+                                </div>
 							</div>
 						</div>
 
