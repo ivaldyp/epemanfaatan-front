@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<link rel="icon" type="image/png" sizes="16x16" href="/{{config('app.name')}}{{ ('/img/bpad-black.jpg') }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="/{{config('app.name')}}{{ ('/img/bpad-black.svg') }}">
 	<title>Monitoring Pemanfaatan</title>
 
 	@yield('css')
@@ -36,13 +36,13 @@
 					{{-- <a class="logo" href="/{{ config('app.name') }}" style="font-size: 20px; color: black; font-family: Helvetica, Arial, sans-serif">
 							<!-- Logo icon image, you can use font-icon also --><b>
 
-							<!--This is dark logo icon--><img src="/{{config('app.name')}}{{ ('/ample/plugins/images/admin-logo.png') }}" alt="home" class="dark-logo" /><!--This is light logo icon--><img src="/{{config('app.name')}}{{ ('/img/bpad-black.jpg') }}" width="10%" alt="home" class="light-logo" />
+							<!--This is dark logo icon--><img src="/{{config('app.name')}}{{ ('/ample/plugins/images/admin-logo.png') }}" alt="home" class="dark-logo" /><!--This is light logo icon--><img src="/{{config('app.name')}}{{ ('/img/bpad-black.svg') }}" width="10%" alt="home" class="light-logo" />
 						 </b>
 						 <span style="text-transform: lowercase; color: #313131" class="hidden-xs">e<strong style="text-transform: capitalize;">Pemanfaatan</strong></span>
 
 					</a> --}}
 					<a class="logo" href="/{{ config('app.name') }}">
-						<img width="20%" src="/{{config('app.name')}}/img/bpad-black.jpg"><span style="text-transform: lowercase; color: #313131" class="hidden-xs">e<strong style="text-transform: capitalize;">Pemanfaatan</strong></span>
+						<img width="20%" src="/{{config('app.name')}}/img/bpad-black.svg"><span style="text-transform: lowercase; color: #313131" class="hidden-xs">e<strong style="text-transform: capitalize;">Pemanfaatan</strong></span>
 						</span>
 					</a>
 				</div>
