@@ -11,11 +11,21 @@ class LandingController extends Controller
 	public function index(Request $request)
 	{
 		$client = new \GuzzleHttp\Client();
-		$response = $client->request('GET', 'https://aset.jakarta.go.id/ws/pemanfaatan.aspx?u=bpadws&p=!@bpad_dki@!&tipe=asetkerjasama');
+		$response = $client->request('GET', 'https://aset.jakarta.go.id/ws/pemanfaatan.aspx?u=bpadws&p=!@bpad_dki@!&tipe=asetkerjasama', [
+            'auth' => [
+                env('API_PEMANFAATAN_USER'), 
+                env('API_PEMANFAATAN_PASS')
+            ]
+        ]);
 		$datamap = json_decode($response->getBody())->hasil;
 		$totalasd = count((array)$datamap);
 
-		$respstat = $client->request('GET', 'https://aset.jakarta.go.id/ws/pemanfaatan.aspx?u=bpadws&p=!@bpad_dki@!&tipe=statistik');
+		$respstat = $client->request('GET', 'https://aset.jakarta.go.id/ws/pemanfaatan.aspx?u=bpadws&p=!@bpad_dki@!&tipe=statistik', [
+            'auth' => [
+                env('API_PEMANFAATAN_USER'), 
+                env('API_PEMANFAATAN_PASS')
+            ]
+        ]);
 		$datastat = json_decode($respstat->getBody())->hasil;
 
 		// dd($datastat);

@@ -29,7 +29,12 @@ class DataController extends Controller
 
 		if ($status == "siap") {
 			$client = new \GuzzleHttp\Client();
-			$response = $client->request('GET', 'https://aset.jakarta.go.id/ws/pemanfaatan.aspx?u=bpadws&p=!@bpad_dki@!&tipe=asetkerjasama'.$kibnow.$alamatnow);
+			$response = $client->request('GET', 'https://aset.jakarta.go.id/ws/pemanfaatan.aspx?u=bpadws&p=!@bpad_dki@!&tipe=asetkerjasama'.$kibnow.$alamatnow. '', [
+                'auth' => [
+                    env('API_PEMANFAATAN_USER'), 
+                    env('API_PEMANFAATAN_PASS')
+                ]
+            ]);
 			$datamap = json_decode($response->getBody());
 		} elseif ($status == "proses") {
 			
@@ -53,7 +58,12 @@ class DataController extends Controller
 	public function single(Request $request)
 	{
 		$client = new \GuzzleHttp\Client();
-		$response = $client->request('GET', 'https://aset.jakarta.go.id/ws/pemanfaatan.aspx?u=bpadws&p=!@bpad_dki@!&tipe=asetkerjasama&ids='.$request->ids);
+		$response = $client->request('GET', 'https://aset.jakarta.go.id/ws/pemanfaatan.aspx?u=bpadws&p=!@bpad_dki@!&tipe=asetkerjasama&ids='.$request->ids, [
+            'auth' => [
+                env('API_PEMANFAATAN_USER'), 
+                env('API_PEMANFAATAN_PASS')
+            ]
+        ]);
 		$datamap = json_decode($response->getBody());
 
 		return json_encode($datamap->hasil[0]);

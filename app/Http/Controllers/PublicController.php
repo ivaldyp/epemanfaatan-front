@@ -36,9 +36,19 @@ class PublicController extends Controller
         $client = new \GuzzleHttp\Client();
 
         // $client2 = new \GuzzleHttp\Client();
-        $resphistory = $client->request('GET', 'https://aset.jakarta.go.id/ws/pemanfaatan.aspx?u=bpadws&p=!@bpad_dki@!&tipe=history&npwp='.$kode);
+        $resphistory = $client->request('GET', 'https://aset.jakarta.go.id/ws/pemanfaatan.aspx?u=bpadws&p=!@bpad_dki@!&tipe=history&npwp='.$kode, [
+            'auth' => [
+                env('API_PEMANFAATAN_USER'), 
+                env('API_PEMANFAATAN_PASS')
+            ]
+        ]);
         $datahistory = json_decode($resphistory->getBody())->hasil;
-        $respprogress = $client->request('GET', 'https://aset.jakarta.go.id/ws/pemanfaatan.aspx?u=bpadws&p=!@bpad_dki@!&tipe=progress&npwp='.$kode);
+        $respprogress = $client->request('GET', 'https://aset.jakarta.go.id/ws/pemanfaatan.aspx?u=bpadws&p=!@bpad_dki@!&tipe=progress&npwp='.$kode, [
+            'auth' => [
+                env('API_PEMANFAATAN_USER'), 
+                env('API_PEMANFAATAN_PASS')
+            ]
+        ]);
         $dataprogress = json_decode($respprogress->getBody())->hasil;
 
         if (isset($datahistory[0]->nm_rekanan)) {
@@ -57,7 +67,12 @@ class PublicController extends Controller
     public function peta(Request $request)
     {
         $client = new \GuzzleHttp\Client();
-        $response = $client->request('GET', 'https://aset.jakarta.go.id/ws/pemanfaatan.aspx?u=bpadws&p=!@bpad_dki@!&tipe=asetkerjasama');
+        $response = $client->request('GET', 'https://aset.jakarta.go.id/ws/pemanfaatan.aspx?u=bpadws&p=!@bpad_dki@!&tipe=asetkerjasama', [
+            'auth' => [
+                env('API_PEMANFAATAN_USER'), 
+                env('API_PEMANFAATAN_PASS')
+            ]
+        ]);
         $datamap = json_decode($response->getBody());
 
     	return view('pages.public_peta')
