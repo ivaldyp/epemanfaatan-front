@@ -112,11 +112,11 @@
 										<img src="/{{config('app.name')}}{{ ('/img/index/carousel-img1.jpeg') }}" alt="First slide image">
                                     </div>
 									@if(count($imgs) > 0)
-									@foreach($imgs as $key => $img)
+									{{-- @foreach($imgs as $key => $img)
 									<div class="item"> 
 										<img src="{{config('app.openfilepemanfaatancarousel')}}/{{ $img['image'] }}" alt="{{ $key+1 }} slide image">
 									</div>
-									@endforeach
+									@endforeach --}}
 									@endif
                                 </div>
 								@if(count($imgs) > 0)
